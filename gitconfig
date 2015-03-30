@@ -1,0 +1,52 @@
+[user]
+	name = Luis Martins
+	email = luis.martins@multiweb.pt
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+[git-tmbundle]
+	gitx-path = /Users/luismartins/Applications/Develop/GitX.app
+[difftool "Kaleidoscope"]
+	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
+[difftool]
+	prompt = false
+[diff]
+	tool = Kaleidoscope
+[core]
+	quotepath = false
+[mergetool]
+	keepBackup = true
+	prompt = false
+[mergetool "Kaleidoscope"]
+	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
+	trustExitCode = true
+[merge]
+	tool = Kaleidoscope
+
+[alias]
+
+    le = log --oneline --decorate
+    ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
+    ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
+    lds = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=short
+    ld = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=relative
+	switch = !legit switch \"$@\"
+	branches = !legit branches
+	sprout = !legit sprout \"$@\"
+	unpublish = !legit unpublish \"$@\"
+	harvest = !legit harvest \"$@\"
+	sync = !legit sync \"$@\"
+	publish = !legit publish \"$@\"
+	graft = !legit graft \"$@\"
+	unstage = reset --
+[filter "media"]
+	required = true
+	clean = git media clean %f
+	smudge = git media smudge %f
+[push]
+	default = simple
+[filter "hawser"]
+	clean = git hawser clean %f
+	smudge = git hawser smudge %f
+	required = true
