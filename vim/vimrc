@@ -430,13 +430,15 @@ let g:airline#extensions#tabline#enabled = 1
 "let g:airline_powerline_fonts = 1
 
 
-
 "Quick Mappings
 nnoremap <F9> :NERDTreeToggle<cr>
 nnoremap <F8> :TagbarToggle<cr>
 nnoremap <F2> :GundoToggle<CR>
 nnoremap <silent> <F3> :YRShow<cr>
 inoremap <silent> <F3> <ESC>:YRShow<cr>
+
+" CtrlP
+nnoremap <leader>. :CtrlPTag<cr>
 
 " The Silver Searcher
 " http://robots.thoughtbot.com/faster-grepping-in-vim
@@ -451,8 +453,10 @@ if executable('ag')
   let g:ctrlp_use_caching = 0
 endif
 
+
 " bind K to grep word under cursor
 nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
+
 
 "Ctrl-P - see gvimrc for remappings
 set runtimepath^=~/.vim/bundle/ctrlp.vim
