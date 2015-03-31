@@ -19,7 +19,8 @@ colorscheme Abra       "Set colorscheme
 "set macmeta
 
 " Command-Return for fullscreen
-macmenu Window.Toggle\ Full\ Screen\ Mode key=<D-CR>
+" macmenu Window.Toggle\ Full\ Screen\ Mode key=<D-CR>
+macmenu File.New\ Tab key=<nop>
 
 " Darn semi-colons, make my life a little easier, but first unmap <D-;>
 macmenu &Tools.Spelling.To\ Next\ error key=<nop>
@@ -39,8 +40,8 @@ macmenu &Tools.Make key=<nop>
 
 " Control P like sublime text
 macmenu &File.Print key=<nop>
-map <D-p> :CtrlP<cr>
-map <D-P> :CtrlPBuffer<cr>
+map <D-t> :CtrlP<cr>
+map <D-T> :CtrlPBuffer<cr>
 
 " Commentary controls like Sublime Text
 nmap <D-/> \\\

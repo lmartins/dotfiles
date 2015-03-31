@@ -47,7 +47,7 @@ Plugin 'xolox/vim-easytags'
 Plugin 'xolox/vim-misc'
 Plugin 'henrik/vim-qargs'
 
-"Plugin 'majutsushi/tagbar'
+Plugin 'majutsushi/tagbar'
 Plugin 'rizzatti/dash.vim'
 Plugin 'danro/rename.vim'
 
@@ -144,7 +144,7 @@ set autowrite
 " INTERFACE
 "-----------------------------------------------------------------------------
 set autoread              "reload files when changed on disk
-set linespace=2           "Slightly higher linespace
+set linespace=4           "Slightly higher linespace
 set relativenumber        "Relative numbers make for easy movement
 set number 		            "Always shows line numbers
 set more                  "Adds the more prompt to long screen prints
@@ -348,6 +348,8 @@ nnoremap <silent> <D-d> :cd %:p:h<cr>
 nnoremap <D-b> <C-^>
 inoremap <D-b> <esc><C-^>
 
+" Search documentation in Dash.app (OSX only)
+nmap <silent> <leader>d <Plug>DashSearch
 
 
 "-----------------------------------------------------------------------------
@@ -422,6 +424,12 @@ nnoremap _pp :set ft=php<CR>
 "-------------------"
 " PLUGIN SETTINGS
 "-------------------"
+
+" Airline Config
+let g:airline#extensions#tabline#enabled = 1
+"let g:airline_powerline_fonts = 1
+
+
 
 "Quick Mappings
 nnoremap <F9> :NERDTreeToggle<cr>
