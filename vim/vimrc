@@ -6,6 +6,7 @@
 set encoding=utf-8        "UTF8 All day, every day
 set nocompatible          "Use vim settings, not vi settings. Affects a lot.
 
+set wildignore+=*/.git/*,*/.idea/*,*/.DS_Store,bower_components/*,node_modules/*,jspm_packages/*
 
 
 " Vundle Setup
@@ -426,7 +427,7 @@ nnoremap _pp :set ft=php<CR>
 "-------------------"
 
 " Airline Config
-let g:airline#extensions#tabline#enabled = 1
+"let g:airline#extensions#tabline#enabled = 1
 "let g:airline_powerline_fonts = 1
 
 
@@ -461,10 +462,7 @@ nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
 "Ctrl-P - see gvimrc for remappings
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 let g:ctrlp_working_path_mode = 'c'
-let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\v[\/]\.(git|hg|svn|node_modules)$',
-  \ 'file': '\v\.(exe|so|dll|jpg|gif|png)$',
-  \ }
+let g:ctrlp_custom_ignore = '\v[\/](node_modules|bower_components|dist)|(\.(swp|ico|git|svn))$'
 
 "Change emmet expansion key to command + e
 let g:user_emmet_expandabbr_key = '<D-e>'
