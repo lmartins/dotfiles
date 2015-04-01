@@ -65,8 +65,6 @@ alias log="git log --all --pretty=format:'%Cred%h%Creset -%C(auto)%d%Creset %s %
 
 alias npmi="npm install --save-dev"
 
-alias server="open http://localhost:8000 && python -m SimpleHTTPServer"
-
 # IP Information
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
 alias localip="ipconfig getifaddr en0"
@@ -81,5 +79,7 @@ alias hosts='sudo sublime /etc/hosts'
 alias sshconfig='sublime ~/.ssh/config'
 alias week='date +%V'
 alias component='nocorrect component'
+
+alias vim="nvim"
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting

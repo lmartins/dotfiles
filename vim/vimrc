@@ -362,15 +362,15 @@ nmap <silent> <leader>d <Plug>DashSearch
 "-----------------------------------------------------------------------------
 
 "Jump to last cursor position when opening a file
-autocmd BufReadPost * call s:SetCursorPosition()
-function! s:SetCursorPosition()
-    if &filetype !~ 'svn\|commit\c'
-        if line("'\"") > 0 && line("'\"") <= line("$")
-            exe "normal! g`\""
-            normal! zz
-        endif
-    end
-endfunction
+"autocmd BufReadPost * call s:SetCursorPosition()
+"function! s:SetCursorPosition()
+"    if &filetype !~ 'svn\|commit\c'
+"        if line("'\"") > 0 && line("'\"") <= line("$")
+"            exe "normal! g`\""
+"            normal! zz
+"        endif
+"    end
+"endfunction
 
 "Autoclose unactive buffers - activate with :call CloseHiddenBuffers()
 "http://stackoverflow.com/questions/2974192/how-can-i-pare-down-vims-buffer-list-to-only-include-active-buffers
@@ -395,6 +395,7 @@ function! s:CloseHiddenBuffers()
 endfun
 
 map <leader>bc :call CloseHiddenBuffers()<cr>
+
 
 "Make .vimrc edits active without relaunch
 if has("autocmd")
@@ -465,7 +466,7 @@ nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
 
 "Ctrl-P - see gvimrc for remappings
 set runtimepath^=~/.vim/bundle/ctrlp.vim
-let g:ctrlp_working_path_mode = 'c'
+let g:ctrlp_working_path_mode = 'ca'
 let g:ctrlp_custom_ignore = '\v[\/](node_modules|bower_components|dist)|(\.(swp|ico|git|svn))$'
 
 "Change emmet expansion key to command + e
@@ -488,7 +489,7 @@ let g:syntastic_mode_map = { 'mode': 'passive',
 let NERDTreeMinimalUI = 1
 let NERDTreeDirArrows = 1
 let NERDTreeShowHidden = 1
-let NERDTreeIgnore=['.git[[dir]]', 'node_modules', '\.DS_Store']
+let NERDTreeIgnore=['.git[[dir]]', 'node_modules', 'bower_components', 'jspm_packages', '\.DS_Store']
 
 "ChangeInside
 nnoremap <silent> <Leader>c :ChangeInsideSurrounding<CR>
