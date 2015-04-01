@@ -186,7 +186,8 @@ set winminwidth=0
 "Toggle spellcheck
 nnoremap <silent> <leader>s :setlocal spell!<CR>
 
-
+"Save with sudo
+cnoremap sudow w !sudo tee % >/dev/null
 
 
 "-----------------------------------------------------------------------------
@@ -207,8 +208,8 @@ set statusline=\ %f\ %m\ %r%=%{SyntasticStatuslineFlag()}\ \ \ %y%12.12(%l\,\ %c
 "-----------------------------------------------------------------------------
 
 set tabstop=4              "Tab stuff
-set shiftwidth=2
-set softtabstop=2
+set shiftwidth=4
+set softtabstop=4
 set shiftround
 set expandtab
 set smartindent            "Indent stuff
@@ -233,7 +234,7 @@ set pastetoggle=<F4>
 "Toggle to different paste modes
 nnoremap \t :set expandtab tabstop=4 shiftwidth=4 softtabstop=4<CR>
 nnoremap \R :set noexpandtab tabstop=4 shiftwidth=4 softtabstop=4<CR>
-nnoremap \m :set expandtab tabstop=2 shiftwidth=2 softtabstop=2<CR>
+nnoremap \m :set expandtab tabstop=2 shiftwidth=4 softtabstop=4<CR>
 
 
 "Toggle wrap mode
@@ -244,6 +245,9 @@ nnoremap \w :setlocal wrap!<CR>:setlocal wrap?<CR>
 "-----------------------------------------------------------------------------
 " EXTRA COMMANDS AND EXTENDED FUNCTIONALITY
 "-----------------------------------------------------------------------------
+
+" Easier square tabs
+:set langmap=º[,`]
 
 "Indentation like textmate/sublime
 nnoremap <D-[> <<
