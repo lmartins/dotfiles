@@ -11,7 +11,8 @@ set fuopt=maxvert,maxhorz   "Sets max height when entering fullscreen
 set fuopt=background:Normal "Set fullscreen bg to match the text bg
 
 " Colorscheme
-colorscheme Abra       "Set colorscheme
+" colorscheme Abra       "Set colorscheme
+colorscheme Atom       "Set colorscheme
 
 " Mac Specific Keybindings
 " ----------------------------------------------------------------------------
