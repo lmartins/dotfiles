@@ -6,7 +6,7 @@
 set encoding=utf-8        "UTF8 All day, every day
 set nocompatible          "Use vim settings, not vi settings. Affects a lot.
 
-set wildignore+=*/.git/*,*/.idea/*,*/.DS_Store,bower_components/*,node_modules/*,jspm_packages/*
+set wildignore+=*/.git/*,*/.idea/*,*/.DS_Store,bower_components/*,node_modules/*,jspm_packages/*,build/*
 
 
 " Vundle Setup
@@ -432,15 +432,15 @@ nnoremap _pp :set ft=php<CR>
 
 " Airline Config
 "let g:airline#extensions#tabline#enabled = 1
-"let g:airline_powerline_fonts = 1
+" let g:airline_powerline_fonts = 1
 
 
 "Quick Mappings
-nnoremap <F9> :NERDTreeToggle<cr>
-nnoremap <F8> :TagbarToggle<cr>
+nnoremap <F10> :NERDTreeToggle<cr>
+nnoremap <F9> :TagbarToggle<cr>
 nnoremap <F2> :GundoToggle<CR>
-nnoremap <silent> <F3> :YRShow<cr>
-inoremap <silent> <F3> <ESC>:YRShow<cr>
+" nnoremap <silent> <F3> :YRShow<cr>
+" inoremap <silent> <F3> <ESC>:YRShow<cr>
 
 " CtrlP
 nnoremap <leader>. :CtrlPTag<cr>
@@ -483,6 +483,8 @@ let g:EasyMotion_leader_key = ',,'
 "Syntastic
 let g:syntastic_mode_map = { 'mode': 'passive',
                            \ 'active_filetypes': ['html', 'javascript', 'php'] }
+let g:syntastic_javascript_jshint_conf = $HOME . '/.jshintrc'
+
 
 "NerdTree
 let NERDTreeMinimalUI = 0 
