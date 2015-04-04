@@ -246,9 +246,6 @@ nnoremap \w :setlocal wrap!<CR>:setlocal wrap?<CR>
 " EXTRA COMMANDS AND EXTENDED FUNCTIONALITY
 "-----------------------------------------------------------------------------
 
-" Easier square tabs
-:set langmap=º[,`]
-
 "Indentation like textmate/sublime
 nnoremap <D-[> <<
 nnoremap <D-]> >>
@@ -346,7 +343,7 @@ nmap <leader>et :tabe %%
 
 
 "Change current directory to that of the file in the buffer with CMD + D
-nnoremap <silent> <D-d> :cd %:p:h<cr>
+nnoremap <silent> <D-d> :cd %:p:h<cr
 
 
 "Jump back to last edited buffer
@@ -486,7 +483,7 @@ let g:syntastic_mode_map = { 'mode': 'passive',
                            \ 'active_filetypes': ['html', 'javascript', 'php'] }
 
 "NerdTree
-let NERDTreeMinimalUI = 1
+let NERDTreeMinimalUI = 0 
 let NERDTreeDirArrows = 1
 let NERDTreeShowHidden = 1
 let NERDTreeIgnore=['.git[[dir]]', 'node_modules', 'bower_components', 'jspm_packages', '\.DS_Store']
