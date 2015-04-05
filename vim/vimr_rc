@@ -1,1 +1,3 @@
 open.quickly.ignore.patterns = */.git, */.hg, .DS_Store, */bower_components, */node_modules, */jspm_packages, */*.xcodeproj
+
+global.keybinding.menuitem.file.new-tab =
