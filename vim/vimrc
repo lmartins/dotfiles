@@ -53,6 +53,7 @@ Plugin 'xolox/vim-colorscheme-switcher'
 Plugin 'majutsushi/tagbar'
 Plugin 'rizzatti/dash.vim'
 " Plugin 'danro/rename.vim'
+Plugin 'lfilho/cosco.vim'
 
 " Syntax
 Plugin 'othree/html5.vim'
@@ -199,7 +200,7 @@ cnoremap sudow w !sudo tee % >/dev/null
 set laststatus=2          "Always show status line
 
 "Syntastic Status Line
-let g:syntastic_stl_format = '[%E{Err: L%fe #%e}%B{, }%W{Warn: L%fw #%w}]'
+" let g:syntastic_stl_format = '[%E{Err: L%fe #%e}%B{, }%W{Warn: L%fw #%w}]'
 
 "Status line
 set statusline=\ %f\ %m\ %r%=%{SyntasticStatuslineFlag()}\ \ \ %y%12.12(%l\,\ %c%V%)%6.6p%%\ 
@@ -357,6 +358,13 @@ inoremap <D-b> <esc><C-^>
 nmap <silent> <leader>d <Plug>DashSearch
 
 
+
+" ChangeInside
+nnoremap <silent> <Leader>c :ChangeInsideSurrounding<CR>
+nnoremap <silent> <Leader>C :ChangeAroundSurrounding<CR>
+
+
+
 "-----------------------------------------------------------------------------
 " HELPER FUNCTIONS
 "-----------------------------------------------------------------------------
@@ -428,6 +436,9 @@ nnoremap _js :set ft=javascript<CR>
 nnoremap _jq :set ft=javascript syntax=jQuery<CR>
 nnoremap _pp :set ft=php<CR>
 
+
+
+
 "-------------------"
 " PLUGIN SETTINGS
 "-------------------"
@@ -439,13 +450,26 @@ nnoremap _pp :set ft=php<CR>
 
 "Quick Mappings
 nnoremap <F10> :NERDTreeToggle<cr>
-nnoremap <F9> :TagbarToggle<cr>
 nnoremap <F2> :GundoToggle<CR>
 " nnoremap <silent> <F3> :YRShow<cr>
 " inoremap <silent> <F3> <ESC>:YRShow<cr>
 
 " CtrlP
 nnoremap <leader>. :CtrlPTag<cr>
+
+
+"Tagbar
+noremap <silent> <Leader>t :TagbarToggle<cr>
+ 
+let g:tagbar_type_css = {
+\ 'ctagstype' : 'Css',
+    \ 'kinds'     : [
+        \ 'c:classes',
+        \ 's:selectors',
+        \ 'i:identities'
+    \ ]
+\ }
+
 
 " The Silver Searcher
 " http://robots.thoughtbot.com/faster-grepping-in-vim
@@ -470,7 +494,8 @@ nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
 "Ctrl-P - see gvimrc for remappings
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 let g:ctrlp_working_path_mode = ''
-let g:ctrlp_custom_ignore = '\v[\/](jpm_packages|node_modules|bower_components|dist|build)|(\.(swp|ico|git|svn))$'
+let g:ctrlp_custom_ignore = '\v[\/](jspm_packages|node_modules|bower_components|dist|build)|(\.(swp|ico|git|svn))$'
+
 
 "Change emmet expansion key to command + e
 let g:user_emmet_expandabbr_key = '<D-e>'
@@ -495,22 +520,13 @@ let NERDTreeDirArrows = 1
 let NERDTreeShowHidden = 1
 let NERDTreeIgnore=['.git[[dir]]', 'node_modules', 'bower_components', 'jspm_packages', '\.DS_Store']
 
-"ChangeInside
-nnoremap <silent> <Leader>c :ChangeInsideSurrounding<CR>
-nnoremap <silent> <Leader>C :ChangeAroundSurrounding<CR>
 
 "Ultisnips
 let g:UltiSnipsEditSplit="vertical"
 
-
-let g:tagbar_type_css = {
-\ 'ctagstype' : 'Css',
-    \ 'kinds'     : [
-        \ 'c:classes',
-        \ 's:selectors',
-        \ 'i:identities'
-    \ ]
-\ }
+" VIM colon and semicolon insertion bliss
+autocmd FileType javascript,css nnoremap <silent> <Leader>; :call cosco#commaOrSemiColon()<CR>
+autocmd FileType javascript,css inoremap <silent> <Leader>; <c-o>:call cosco#commaOrSemiColon()<CR>
 
 "-----------------------------------------------------------------------------
 " MACHINE SPECIFIC SETTINGS
