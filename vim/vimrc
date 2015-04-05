@@ -52,7 +52,7 @@ Plugin 'xolox/vim-colorscheme-switcher'
 Plugin 'Taverius/vim-colorscheme-manager'
 Plugin 'majutsushi/tagbar'
 Plugin 'rizzatti/dash.vim'
-Plugin 'danro/rename.vim'
+" Plugin 'danro/rename.vim'
 
 " Syntax
 Plugin 'othree/html5.vim'
@@ -231,6 +231,7 @@ set showbreak=+\
 
 "Toggle paste
 set pastetoggle=<F4>
+
 
 
 "Toggle to different paste modes
@@ -413,6 +414,7 @@ endif
 if has("autocmd")
     au BufRead,BufNewFile jquery.*.js set ft=javascript syntax=jquery
     au BufRead,BufNewFile *.txt,*.text set filetype=markdown
+    au BufRead,BufNewFile *.scss set ft=scss.css
     au FileType html,xhtml,css,scss,ruby,eruby,liquid,pml,yaml,php,coffee,vim setlocal ts=2 sts=2 sw=2 expandtab
     au FileType javascript setlocal ts=4 sts=4 sw=4 noexpandtab
     au FileType css,scss,sass setlocal iskeyword+=-
@@ -458,6 +460,8 @@ if executable('ag')
   let g:ctrlp_use_caching = 0
 endif
 
+" Wildfire quick select
+nmap <leader>s <Plug>(wildfire-quick-select)
 
 " bind K to grep word under cursor
 nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
@@ -497,6 +501,16 @@ nnoremap <silent> <Leader>C :ChangeAroundSurrounding<CR>
 
 "Ultisnips
 let g:UltiSnipsEditSplit="vertical"
+
+
+let g:tagbar_type_css = {
+\ 'ctagstype' : 'Css',
+    \ 'kinds'     : [
+        \ 'c:classes',
+        \ 's:selectors',
+        \ 'i:identities'
+    \ ]
+\ }
 
 "-----------------------------------------------------------------------------
 " MACHINE SPECIFIC SETTINGS
