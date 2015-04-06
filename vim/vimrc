@@ -192,6 +192,8 @@ nnoremap <silent> <leader>s :setlocal spell!<CR>
 "Save with sudo
 cnoremap sudow w !sudo tee % >/dev/null
 
+" Switch between the last two files
+" nnoremap <leader><leader> <c-^>
 
 "-----------------------------------------------------------------------------
 " STATUS LINE
@@ -212,9 +214,9 @@ set statusline=\ %f\ %m\ %r%=%{SyntasticStatuslineFlag()}\ \ \ %y%12.12(%l\,\ %c
 
 set tabstop=4              "Tab stuff
 set shiftwidth=4
-set softtabstop=4
+set softtabstop=0
 set shiftround
-set expandtab
+set noexpandtab
 set smartindent            "Indent stuff
 set autoindent
 
@@ -371,16 +373,31 @@ nnoremap <silent> <Leader>C :ChangeAroundSurrounding<CR>
 " HELPER FUNCTIONS
 "-----------------------------------------------------------------------------
 
-"Jump to last cursor position when opening a file
-"autocmd BufReadPost * call s:SetCursorPosition()
-"function! s:SetCursorPosition()
-"    if &filetype !~ 'svn\|commit\c'
-"        if line("'\"") > 0 && line("'\"") <= line("$")
-"            exe "normal! g`\""
-"            normal! zz
-"        endif
-"    end
-"endfunction
+augroup vimrcEx
+  autocmd!
+
+  " When editing a file, always jump to the last known cursor position.
+  " Don't do it for commit messages, when the position is invalid, or when
+  " inside an event handler (happens when dropping a file on gvim).
+  autocmd BufReadPost *
+    \ if &ft != 'gitcommit' && line("'\"") > 0 && line("'\"") <= line("$") |
+    \   exe "normal g`\"" |
+    \ endif
+
+  " Enable spellchecking for Markdown
+  autocmd FileType markdown setlocal spell
+
+  " Automatically wrap at 80 characters for Markdown
+  autocmd BufRead,BufNewFile *.md setlocal textwidth=80
+
+  " Automatically wrap at 72 characters and spell check git commit messages
+  autocmd FileType gitcommit setlocal textwidth=72
+  autocmd FileType gitcommit setlocal spell
+
+  " Allow stylesheets to autocomplete hyphenated words
+  autocmd FileType css,scss,sass setlocal iskeyword+=-
+augroup END
+
 
 "Autoclose unactive buffers - activate with :call CloseHiddenBuffers()
 "http://stackoverflow.com/questions/2974192/how-can-i-pare-down-vims-buffer-list-to-only-include-active-buffers
@@ -425,7 +442,7 @@ if has("autocmd")
     au BufRead,BufNewFile jquery.*.js set ft=javascript syntax=jquery
     au BufRead,BufNewFile *.txt,*.text set filetype=markdown
     au BufRead,BufNewFile *.scss set ft=scss.css
-    au FileType html,xhtml,css,scss,ruby,eruby,liquid,pml,yaml,php,coffee,vim setlocal ts=2 sts=2 sw=2 expandtab
+    " au FileType html,xhtml,css,scss,ruby,eruby,liquid,pml,yaml,php,coffee,vim setlocal ts=2 sts=2 sw=2 expandtab
     au FileType javascript setlocal ts=4 sts=4 sw=4 noexpandtab
     au FileType css,scss,sass setlocal iskeyword+=-
     au FileType markdown setlocal spell
@@ -510,6 +527,7 @@ nnoremap <leader>tt <Plug>VimwikiToggleListItem
 
 "EasyMotion
 let g:EasyMotion_leader_key = ',,'
+" map <Leader> <Plug>(easymotion-prefix)
 
 "Syntastic
 let g:syntastic_mode_map = { 'mode': 'passive',
