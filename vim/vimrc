@@ -60,6 +60,8 @@ Plugin 'othree/html5.vim'
 Plugin 'evidens/vim-twig'
 Plugin 'pangloss/vim-javascript'
 Plugin 'nono/jquery.vim'
+Plugin 'cakebaker/scss-syntax.vim'
+Plugin 'hail2u/vim-css3-syntax'
 "Plugin 'nathanlong/vim-markdown'
 
 
@@ -194,6 +196,9 @@ cnoremap sudow w !sudo tee % >/dev/null
 
 " Switch between the last two files
 " nnoremap <leader><leader> <c-^>
+
+" Auto ident when opening brackets and moving to a new line
+inoremap <C-Return> <Esc>$T{i<CR><CR><C-o>k<Tab>
 
 "-----------------------------------------------------------------------------
 " STATUS LINE
@@ -469,7 +474,9 @@ nnoremap _pp :set ft=php<CR>
 
 "Quick Mappings
 nnoremap <F10> :NERDTreeToggle<cr>
+imap <F10> <Esc>:NERDTreeToggle<cr>i
 nnoremap <F2> :GundoToggle<CR>
+imap <F2> <Esc>:GundoToggle<cr>i
 " nnoremap <silent> <F3> :YRShow<cr>
 " inoremap <silent> <F3> <ESC>:YRShow<cr>
 
