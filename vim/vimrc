@@ -54,6 +54,7 @@ Plugin 'majutsushi/tagbar'
 Plugin 'rizzatti/dash.vim'
 " Plugin 'danro/rename.vim'
 Plugin 'lfilho/cosco.vim'
+Plugin 'Raimondi/delimitMate'
 
 " Syntax
 Plugin 'othree/html5.vim'
@@ -557,6 +558,20 @@ let g:UltiSnipsEditSplit="vertical"
 " VIM colon and semicolon insertion bliss
 autocmd FileType javascript,css nnoremap <silent> <Leader>; :call cosco#commaOrSemiColon()<CR>
 autocmd FileType javascript,css inoremap <silent> <Leader>; <c-o>:call cosco#commaOrSemiColon()<CR>
+
+
+"-------------------------
+" DelimitMate
+
+" Delimitmate place cursor correctly n multiline objects e.g.
+" if you press enter in {} cursor still be
+" in the middle line instead of the last
+let delimitMate_expand_cr = 1
+
+" Delimitmate place cursor correctly in singleline pairs e.g.
+" if x - cursor if you press space in {x} result will be { x } instead of { x}
+let delimitMate_expand_space = 1
+
 
 "-----------------------------------------------------------------------------
 " MACHINE SPECIFIC SETTINGS
