@@ -200,6 +200,9 @@ cnoremap sudow w !sudo tee % >/dev/null
 " Auto ident when opening brackets and moving to a new line
 inoremap <C-Return> <Esc>$T{i<CR><CR><C-o>k<Tab>
 
+" Remove trailing white-space on saving
+autocmd BufWritePre * :%s/\s\+$//e
+
 "-----------------------------------------------------------------------------
 " STATUS LINE
 "-----------------------------------------------------------------------------
@@ -210,7 +213,7 @@ set laststatus=2          "Always show status line
 " let g:syntastic_stl_format = '[%E{Err: L%fe #%e}%B{, }%W{Warn: L%fw #%w}]'
 
 "Status line
-set statusline=\ %f\ %m\ %r%=%{SyntasticStatuslineFlag()}\ \ \ %y%12.12(%l\,\ %c%V%)%6.6p%%\ 
+set statusline=\ %f\ %m\ %r%=%{SyntasticStatuslineFlag()}\ \ \ %y%12.12(%l\,\ %c%V%)%6.6p%%\
 
 
 "-----------------------------------------------------------------------------
@@ -234,7 +237,7 @@ set wrap
 set linebreak
 " set textwidth=78
 set formatoptions=qrn1
-set showbreak=+\ 
+set showbreak=+\
 
 "Toggle paste
 set pastetoggle=<F4>
@@ -486,7 +489,7 @@ nnoremap <leader>. :CtrlPTag<cr>
 
 "Tagbar
 noremap <silent> <Leader>t :TagbarToggle<cr>
- 
+
 let g:tagbar_type_css = {
 \ 'ctagstype' : 'Css',
     \ 'kinds'     : [
@@ -542,7 +545,7 @@ let g:syntastic_mode_map = { 'mode': 'passive',
 let g:syntastic_javascript_jshint_args = '--config /Users/luismartins/.jshintrc'
 
 "NerdTree
-let NERDTreeMinimalUI = 0 
+let NERDTreeMinimalUI = 0
 let NERDTreeDirArrows = 1
 let NERDTreeShowHidden = 1
 let NERDTreeIgnore=['.git[[dir]]', 'node_modules', 'bower_components', 'jspm_packages', '\.DS_Store']
