@@ -33,7 +33,7 @@ Plugin 'mattn/emmet-vim'
 Plugin 'myusuf3/numbers.vim'
 Plugin 'rking/ag.vim'
 Plugin 'scrooloose/nerdtree'
-"Plugin 'scrooloose/syntastic'
+Plugin 'scrooloose/syntastic'
 Plugin 'sjl/gundo.vim'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'tpope/vim-commentary'
@@ -63,6 +63,8 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'nono/jquery.vim'
 Plugin 'cakebaker/scss-syntax.vim'
 Plugin 'hail2u/vim-css3-syntax'
+Plugin 'StanAngeloff/php.vim'
+Plugin 'shawncplus/phpcomplete.vim'
 "Plugin 'nathanlong/vim-markdown'
 
 
@@ -471,9 +473,11 @@ nnoremap _pp :set ft=php<CR>
 " PLUGIN SETTINGS
 "-------------------"
 
+
+" ------------------------------------
 " Airline Config
-"let g:airline#extensions#tabline#enabled = 1
-" let g:airline_powerline_fonts = 1
+" let g:airline#extensions#tabline#enabled = 1
+let g:airline_powerline_fonts = 1
 
 
 "Quick Mappings
@@ -490,8 +494,9 @@ nnoremap <leader>. :CtrlPTag<cr>
 nnoremap <leader><space> :CtrlPBuffer<cr>
 
 
-"Tagbar
-noremap <silent> <Leader>t :TagbarToggle<cr>
+" ------------------------------------
+" Tagbar
+noremap <F11> :TagbarToggle<cr>
 
 let g:tagbar_type_css = {
 \ 'ctagstype' : 'Css',
@@ -503,6 +508,7 @@ let g:tagbar_type_css = {
 \ }
 
 
+" ------------------------------------
 " The Silver Searcher
 " http://robots.thoughtbot.com/faster-grepping-in-vim
 if executable('ag')
@@ -524,7 +530,7 @@ nmap <leader>s <Plug>(wildfire-quick-select)
 " in this example, html and xml share the same text objects
 " let g:wildfire_objects = {
 "     \ "*" : ["i'", 'i"', "i)", "i]", "i}"],
-"     \ "html,xml" : ["at","it"],
+"     \ "html,xml,twig" : ["at","it"],
 " \ }
 
 
@@ -563,8 +569,8 @@ let NERDTreeIgnore=['.git[[dir]]', 'node_modules', 'bower_components', 'jspm_pac
 let g:UltiSnipsEditSplit="vertical"
 
 " VIM colon and semicolon insertion bliss
-autocmd FileType javascript,css nnoremap <silent> <Leader>; :call cosco#commaOrSemiColon()<CR>
-autocmd FileType javascript,css inoremap <silent> <Leader>; <c-o>:call cosco#commaOrSemiColon()<CR>
+autocmd FileType javascript,css,scss nnoremap <silent> <Leader>; :call cosco#commaOrSemiColon()<CR>
+autocmd FileType javascript,css,scss inoremap <silent> <Leader>; <c-o>:call cosco#commaOrSemiColon()<CR>
 
 
 "-------------------------
