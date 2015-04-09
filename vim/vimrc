@@ -473,12 +473,13 @@ nnoremap _pp :set ft=php<CR>
 
 " Airline Config
 "let g:airline#extensions#tabline#enabled = 1
-let g:airline_powerline_fonts = 1
+" let g:airline_powerline_fonts = 1
 
 
 "Quick Mappings
 nnoremap <F10> :NERDTreeToggle<cr>
 imap <F10> <Esc>:NERDTreeToggle<cr>i
+nmap ,r :NERDTreeFind<CR>
 nnoremap <F2> :GundoToggle<CR>
 imap <F2> <Esc>:GundoToggle<cr>i
 " nnoremap <silent> <F3> :YRShow<cr>

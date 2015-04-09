@@ -6,7 +6,7 @@ set guioptions-=R           "Do not use scrollbars
 set guioptions-=l           "Do not use scrollbars
 set guioptions-=L           "Do not use scrollbars
 "set linespace=4             "More vertical space
-set guifont=Fira\ Mono\ for\ Powerline:h12  "Set font type and size.
+set guifont=Fira\ Mono:h12  "Set font type and size.
 set fuopt=maxvert,maxhorz   "Sets max height when entering fullscreen
 set fuopt=background:Normal "Set fullscreen bg to match the text bg
 

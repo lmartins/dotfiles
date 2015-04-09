@@ -1,7 +1,12 @@
 extends css
 
-snippet red "include"
-@include border(red);
+
+snippet ! "Important"
+!important
+endsnippet
+
+snippet red "Debug Border"
+@include border(${1:red});$2
 endsnippet
 
 snippet abs "Absolute Position"
@@ -71,9 +76,10 @@ snippet mqu "MQ: Until"
 endsnippet
 
 snippet sco "SASS Comment Block"
-// ----------------------------------------------------------------------------
-// ${1}
-// ----------------------------------------------------------------------------
+/* ----------------------------------------------------------------------------
+ * ${1}
+ * ----------------------------------------------------------------------------
+ */
 endsnippet
 
 snippet sco2 "SASS Comment Style 2"
