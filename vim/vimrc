@@ -65,8 +65,8 @@ Plugin 'cakebaker/scss-syntax.vim'
 Plugin 'hail2u/vim-css3-syntax'
 Plugin 'StanAngeloff/php.vim'
 Plugin 'shawncplus/phpcomplete.vim'
+Plugin 'mustache/vim-mustache-handlebars'
 "Plugin 'nathanlong/vim-markdown'
-
 
 
 " Colorschemes
