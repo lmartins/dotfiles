@@ -55,6 +55,8 @@ Plugin 'rizzatti/dash.vim'
 " Plugin 'danro/rename.vim'
 Plugin 'lfilho/cosco.vim'
 Plugin 'Raimondi/delimitMate'
+Plugin 'tpope/vim-fugitive'
+
 
 " Syntax
 Plugin 'othree/html5.vim'
@@ -189,6 +191,11 @@ set diffopt=filler,vertical
 "Allows splits to be squashed to one line
 set winminheight=0
 set winminwidth=0
+
+
+" Close open Tags
+" Find way to map these keys
+" inoremap <D-.> </<C-X><C-O>
 
 
 "Toggle spellcheck
@@ -478,7 +485,7 @@ nnoremap _pp :set ft=php<CR>
 " Airline Config
 " let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
-
+let g:airline_theme = 'powerlineish'
 
 "Quick Mappings
 nnoremap <F10> :NERDTreeToggle<cr>
@@ -546,6 +553,7 @@ let g:ctrlp_custom_ignore = '\v[\/](jspm_packages|node_modules|bower_components|
 
 
 "Change emmet expansion key to command + e
+" imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")  This breaks Supertab, find a way to do  it
 let g:user_emmet_expandabbr_key = '<D-e>'
 let g:user_emmet_next_key = '<C-f>'
 
