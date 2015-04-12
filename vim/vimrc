@@ -195,33 +195,12 @@ set winminheight=0
 set winminwidth=0
 
 
-" Close open Tags
-" Find way to map these keys
-" inoremap <D-.> </<C-X><C-O>
-
-" Keep search matches in the middle of the screen
-nnoremap n nzz
-nnoremap N Nzz
-
-" Move visual block
-vnoremap J :m '>+1<CR>gv=gv
-vnoremap K :m '<-2<CR>gv=gv
-
-"set Y to duplicate line or selection
-nmap Y yyp
-vmap Y y`>pgv " Duplicates then regains selection.
-
 "Toggle spellcheck
 nnoremap <silent> <leader>s :setlocal spell!<CR>
 
 "Save with sudo
 cnoremap sudow w !sudo tee % >/dev/null
 
-" Switch between the last two files
-" nnoremap <leader><leader> <c-^>
-
-" Auto ident when opening brackets and moving to a new line
-inoremap <C-Return> <Esc>$T{i<CR><CR><C-o>k<Tab>
 
 " Remove trailing white-space on saving
 autocmd BufWritePre * :%s/\s\+$//e
@@ -398,6 +377,39 @@ nmap <silent> <leader>d <Plug>DashSearch
 nnoremap <silent> <Leader>c :ChangeInsideSurrounding<CR>
 nnoremap <silent> <Leader>C :ChangeAroundSurrounding<CR>
 
+" Close open Tags
+" Find way to map these keys
+" inoremap <D-.> </<C-X><C-O>
+
+" Keep search matches in the middle of the screen
+nnoremap n nzz
+nnoremap N Nzz
+
+" Move visual block
+vnoremap J :m '>+1<CR>gv=gv
+vnoremap K :m '<-2<CR>gv=gv
+
+"set Y to duplicate line or selection
+nmap Y yyp
+vmap Y y`>pgv " Duplicates then regains selection.
+
+
+" Switch between the last two files
+" nnoremap <leader><leader> <c-^>
+
+" Auto indent when opening brackets and moving to a new line
+inoremap <C-Return> <Esc>$T{i<CR><CR><C-o>k<Tab>
+
+
+" Move to the previous buffer
+nnoremap H :bprevious<CR>
+
+" Move to the next buffer
+nnoremap L :bnext<CR>
+
+" Replace H and L
+nnoremap + H
+nnoremap _ L
 
 
 "-----------------------------------------------------------------------------
