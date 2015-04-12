@@ -76,6 +76,8 @@ Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'nathanlong/vim-colors-tomorrow'
 Plugin 'nathanlong/vim-colors-writer'
 Plugin 'flazz/vim-colorschemes'
+Plugin 'atelierbram/vim-colors_atelier-schemes'
+Plugin 'stulzer/heroku-colorscheme'
 
 
 " Plugins that don't play well with the terminal
@@ -197,6 +199,17 @@ set winminwidth=0
 " Find way to map these keys
 " inoremap <D-.> </<C-X><C-O>
 
+" Keep search matches in the middle of the screen
+nnoremap n nzz
+nnoremap N Nzz
+
+" Move visual block
+vnoremap J :m '>+1<CR>gv=gv
+vnoremap K :m '<-2<CR>gv=gv
+
+"set Y to duplicate line or selection
+nmap Y yyp
+vmap Y y`>pgv " Duplicates then regains selection.
 
 "Toggle spellcheck
 nnoremap <silent> <leader>s :setlocal spell!<CR>
@@ -485,7 +498,7 @@ nnoremap _pp :set ft=php<CR>
 " Airline Config
 " let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
-let g:airline_theme = 'powerlineish'
+" let g:airline_theme = 'powerlineish'
 
 "Quick Mappings
 nnoremap <F10> :NERDTreeToggle<cr>
@@ -556,6 +569,8 @@ let g:ctrlp_custom_ignore = '\v[\/](jspm_packages|node_modules|bower_components|
 " imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")  This breaks Supertab, find a way to do  it
 let g:user_emmet_expandabbr_key = '<D-e>'
 let g:user_emmet_next_key = '<C-f>'
+
+
 
 "EasyMotion
 let g:EasyMotion_leader_key = ',,'
