@@ -17,7 +17,7 @@ set fuopt=background:Normal "Set fullscreen bg to match the text bg
 " colorscheme Mustang
 colorscheme Obsidian2
 " colorscheme Tomorrow
-" colorscheme Tomorrow Night
+" colorscheme Tomorrow
 " colorscheme base16-atelierdune
 
 
