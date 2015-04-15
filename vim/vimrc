@@ -61,6 +61,9 @@ Plugin 'justinmk/vim-gtfo'
 Plugin 'mhinz/vim-startify'
 Plugin 'nelstrom/vim-visual-star-search'
 " Plugin 'tmhedberg/indent-motion'
+" Plugin 'jeetsukumaran/vim-indentwise'
+
+
 
 " Syntax
 Plugin 'othree/html5.vim'
@@ -422,6 +425,9 @@ if exists(":Tabularize")
 	nmap <Leader>a: :Tabularize /:\zs<CR>
 	vmap <Leader>a: :Tabularize /:\zs<CR>
 endif
+
+
+
 
 "-----------------------------------------------------------------------------
 " HELPER FUNCTIONS
