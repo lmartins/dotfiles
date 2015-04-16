@@ -386,7 +386,6 @@ nnoremap <silent> <Leader>C :ChangeAroundSurrounding<CR>
 
 " Close open Tags
 " Find way to map these keys
-" inoremap <D-.> </<C-X><C-O>
 
 " Keep search matches in the middle of the screen
 nnoremap n nzz
@@ -603,7 +602,6 @@ let g:ctrlp_custom_ignore = '\v[\/](jspm_packages|node_modules|bower_components|
 " imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")  This breaks Supertab, find a way to do  it
 let g:user_emmet_expandabbr_key = '<D-e>'
 let g:user_emmet_next_key = '<C-f>'
-
 
 
 "EasyMotion
