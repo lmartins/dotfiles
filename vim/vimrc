@@ -24,7 +24,7 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'briandoll/change-inside-surroundings.vim'
 Plugin 'wincent/Command-T'
 Plugin 'ctrlpvim/ctrlp.vim'
-" Plugin 'ervandew/supertab'
+Plugin 'ervandew/supertab'
 Plugin 'gcmt/wildfire.vim'
 Plugin 'godlygeek/tabular'
 Plugin 'gregsexton/MatchTag'
@@ -56,7 +56,7 @@ Plugin 'rizzatti/dash.vim'
 Plugin 'lfilho/cosco.vim'
 Plugin 'Raimondi/delimitMate'
 Plugin 'tpope/vim-fugitive'
-Plugin 'Valloric/YouCompleteMe'
+"Plugin 'Valloric/YouCompleteMe'
 Plugin 'justinmk/vim-gtfo'
 Plugin 'mhinz/vim-startify'
 Plugin 'nelstrom/vim-visual-star-search'
@@ -618,7 +618,7 @@ let NERDTreeDirArrows = 1
 let NERDTreeShowHidden = 1
 let NERDTreeIgnore=['.git[[dir]]', 'node_modules', 'bower_components', 'jspm_packages', '\.DS_Store']
 
-
+" -------------------------------------------
 "Ultisnips
 let g:UltiSnipsEditSplit="vertical"
 
@@ -626,6 +626,9 @@ let g:UltiSnipsEditSplit="vertical"
 autocmd FileType javascript,css,scss nnoremap <silent> <Leader>; :call cosco#commaOrSemiColon()<CR>
 autocmd FileType javascript,css,scss inoremap <silent> <Leader>; <c-o>:call cosco#commaOrSemiColon()<CR>
 
+" -------------------------------------------
+" GTFO calls iTerm instead of terminal
+let g:gtfo#terminals = { 'mac' : 'iterm' }
 
 "-------------------------
 " DelimitMate
