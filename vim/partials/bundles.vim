@@ -15,7 +15,7 @@ Plugin 'gmarik/Vundle.vim'
 
 "Plugins
 Plugin 'briandoll/change-inside-surroundings.vim'
-Plugin 'wincent/Command-T'
+" Plugin 'wincent/Command-T'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'ervandew/supertab'
 Plugin 'gcmt/wildfire.vim'
