@@ -56,8 +56,14 @@ Plugin 'rizzatti/dash.vim'
 Plugin 'lfilho/cosco.vim'
 Plugin 'Raimondi/delimitMate'
 Plugin 'tpope/vim-fugitive'
-" Plugin 'Valloric/YouCompleteMe'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'justinmk/vim-gtfo'
+Plugin 'mhinz/vim-startify'
+Plugin 'nelstrom/vim-visual-star-search'
 Plugin 'moll/vim-bbye'
+
+
+
 
 " Syntax
 Plugin 'othree/html5.vim'
@@ -411,6 +417,16 @@ nnoremap L :bnext<CR>
 " Replace H and L
 nnoremap + H
 nnoremap _ L
+
+" Tabularize Mappings
+if exists(":Tabularize")
+	nmap <Leader>a= :Tabularize /=<CR>
+	vmap <Leader>a= :Tabularize /=<CR>
+	nmap <Leader>a: :Tabularize /:\zs<CR>
+	vmap <Leader>a: :Tabularize /:\zs<CR>
+endif
+
+
 
 " Close buffers without closing window
 :nnoremap <Leader>q :Bdelete<CR>
