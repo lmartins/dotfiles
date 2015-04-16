@@ -427,6 +427,9 @@ if exists(":Tabularize")
 endif
 
 
+" Move to next/previous line with same indentation
+nnoremap <M-,> :call search('^'. matchstr(getline('.'), '\(^\s*\)') .'\%<' . line('.') . 'l\S', 'be')<CR>
+nnoremap <M-.> :call search('^'. matchstr(getline('.'), '\(^\s*\)') .'\%>' . line('.') . 'l\S', 'e')<CR>
 
 " Close buffers without closing window
 :nnoremap <Leader>q :Bdelete<CR>
