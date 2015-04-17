@@ -75,8 +75,9 @@ Plugin 'mustache/vim-mustache-handlebars'
 " Colorschemes
 "Plugin 'nathanlong/vim-colors-solarized'
 Plugin 'nathanlong/vim-colors-tomorrow'
-Plugin 'nathanlong/vim-colors-writer'
+" Plugin 'nathanlong/vim-colors-writer'
 Plugin 'flazz/vim-colorschemes'
+Plugin 'chriskempson/base16-vim'
 Plugin 'atelierbram/vim-colors_atelier-schemes'
 Plugin 'stulzer/heroku-colorscheme'
 
