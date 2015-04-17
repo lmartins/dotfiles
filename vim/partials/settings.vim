@@ -17,7 +17,7 @@ set visualbell            "Use visual bell instead of beep add t_vb= to disable
 set foldmethod=marker     "Use {{{ and }}} to define folds
 set gdefault              "Apply substitutions globally on a line by default
 set ttyfast               "Speed up terminal connection
-" set clipboard=unnamed     "Give yank commands access to system clipboard
+set clipboard=unnamed     "Give yank commands access to system clipboard
 
 
 
@@ -54,6 +54,7 @@ set mouse=a
 " Automatically save changes before switching buffer with some
 " commands, like :cnfile.
 set autowrite
+
 
 
 
@@ -96,8 +97,8 @@ set diffopt=filler,vertical
 
 
 "Allows splits to be squashed to one line
-set winminheight=0
-set winminwidth=0
+" set winminheight=0
+" set winminwidth=0
 
 
 "Toggle spellcheck
@@ -138,8 +139,6 @@ set showbreak=+\
 
 "Toggle paste
 set pastetoggle=<F4>
-
-
 
 "Toggle to different paste modes
 nnoremap \t :set expandtab tabstop=4 shiftwidth=4 softtabstop=4<CR>
