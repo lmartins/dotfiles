@@ -9,7 +9,7 @@ set nocompatible          "Use vim settings, not vi settings. Affects a lot.
 set wildignore+=*/.git/*,*/.idea/*,*/.DS_Store,bower_components/*,node_modules/*,jspm_packages/*,build/*
 
 
-" Check if git is available and if vundle is already installed  {{{
+" Check if git is available and if vundle is already installed
 if executable("git") != 1 && !filereadable($HOME."/.dotfiles/bundle/vundle/README.md")
     echo "GIT is required to install bundles:"
 else
@@ -227,8 +227,8 @@ if has("autocmd")
     au FileType markdown setlocal spell
 
 	" Use emmet only for html and css files
-	let g:user_emmet_install_global = 0
-	au FileType html,css,scss EmmetInstall
+	" let g:user_emmet_install_global = 0
+	" au FileType html,twig,css,scss EmmetInstall
 endif
 
 "Easy filetype switching
