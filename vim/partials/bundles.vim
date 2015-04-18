@@ -52,10 +52,9 @@ Plugin 'tpope/vim-fugitive'
 " Plugin 'Valloric/YouCompleteMe'
 Plugin 'justinmk/vim-gtfo'
 Plugin 'mhinz/vim-startify'
-Plugin 'nelstrom/vim-visual-star-search'
+" Plugin 'nelstrom/vim-visual-star-search'
 Plugin 'moll/vim-bbye'
-
-
+Bundle 'mbadran/headlights'
 
 
 

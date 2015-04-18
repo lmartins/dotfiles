@@ -15,11 +15,12 @@ set fuopt=background:Normal "Set fullscreen bg to match the text bg
 set background=dark
 " set background=light
 " colorscheme Mustang
-colorscheme Obsidian2
+" colorscheme Obsidian2
 " colorscheme Solarized
 " colorscheme Tomorrow
 " colorscheme Tomorrow-Night
 " colorscheme Atom
+colorscheme base16-ateliersulphurpool
 " colorscheme Hornet
 " colorscheme Hybrid
 " colorscheme Saturn

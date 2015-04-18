@@ -37,10 +37,12 @@ nnoremap <leader><space> :CtrlPBuffer<cr>
 " -----------------------------------------------------------------------------
 " EMMET
 " -----------------------------------------------------------------------------
-"Change emmet expansion key to command + e
+let g:user_emmet_mode='a'    "enable all function in all modes.
+" Change emmet expansion key to command + e
 " imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")  This breaks Supertab, find a way to do  it
 let g:user_emmet_expandabbr_key = '<D-e>'
 let g:user_emmet_next_key = '<C-f>'
+" let g:user_emmet_prev_key = '<C-F>'
 
 
 "------------------------------------------------------------------------------
