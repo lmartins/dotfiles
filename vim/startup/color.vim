@@ -7,8 +7,8 @@ set background=dark
 " colorscheme Solarized
 " colorscheme Tomorrow
 " colorscheme Tomorrow-Night
-" colorscheme Atom
-colorscheme base16-ateliersulphurpool
+colorscheme Atom
+" colorscheme base16-ateliersulphurpool
 " colorscheme Hornet
 " colorscheme Hybrid
 " colorscheme Saturn

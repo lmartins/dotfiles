@@ -4,10 +4,10 @@
 "-----------------------------------------------------------------------------
 
 " Unmap the arrow keys
-" no <down> ddp
-" no <left> <Nop>
-" no <right> <Nop>
-" no <up> ddkP
+no <down> ddp
+no <left> <Nop>
+no <right> <Nop>
+no <up> ddkP
 ino <down> <Nop>
 ino <left> <Nop>
 ino <right> <Nop>
@@ -54,6 +54,7 @@ inoremap <D-b> <esc><C-^>
 " Keep search matches in the middle of the screen
 nnoremap n nzz
 nnoremap N Nzz
+
 
 " Close buffers without closing window
 :nnoremap <Leader>q :Bdelete<CR>
