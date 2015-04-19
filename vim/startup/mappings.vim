@@ -12,10 +12,10 @@ ino <down> <Nop>
 ino <left> <Nop>
 ino <right> <Nop>
 ino <up> <Nop>
-" vno <down> <Nop>
-" vno <left> <Nop>
-" vno <right> <Nop>
-" vno <up> <Nop>
+vno <down> <Nop>
+vno <left> <Nop>
+vno <right> <Nop>
+vno <up> <Nop>
 
 "Map space to search and shift-space to backwards search
 nnoremap <space> /
@@ -135,7 +135,7 @@ nnoremap <C-A-up> YPj
 xnoremap <C-A-up> y`<Pgv
 
 "Select a line without trailing whitespace or linebreaks
-nnoremap <leader>l <esc>^vg_
+" nnoremap <leader>l <esc>^vg_
 
 "Open line above (ctrl-shift-o much easier than ctrl-o shift-O)
 "SO USEFUL!!!
@@ -154,4 +154,11 @@ vmap Y y`>pgv " Duplicates then regains selection.
 " Find way to map these keys
 "inoremap <D-.> </<C-X><C-O>
 " imap <D-.> </<C-X><C-O>
+
+
+" EASY OPERATOR LINE
+omap <Leader>L  <Plug>(easyoperator-line-select)
+xmap <Leader>L  <Plug>(easyoperator-line-select)
+nmap d<Leader>L <Plug>(easyoperator-line-delete)
+nmap p<Leader>L <Plug>(easyoperator-line-yank)
 
