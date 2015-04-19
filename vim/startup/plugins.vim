@@ -13,6 +13,7 @@ let g:airline#extensions#tabline#left_alt_sep = '|'
 " -----------------------------------------------------------------------------
 " POWERLINE
 " -----------------------------------------------------------------------------
+" set guifont=Inconsolata\ for\ Powerline:h15
 let g:Powerline_symbols = 'fancy'
 
 
