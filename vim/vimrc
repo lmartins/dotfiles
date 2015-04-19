@@ -5,6 +5,10 @@
 "The super basic stuff:
 set encoding=utf-8        "UTF8 All day, every day
 set nocompatible          "Use vim settings, not vi settings. Affects a lot.
+set t_Co=256
+set fillchars+=stl:\ ,stlnc:\
+set termencoding=utf-8
+
 
 set wildignore+=*/.git/*,*/.idea/*,*/.DS_Store,bower_components/*,node_modules/*,jspm_packages/*,build/*
 
@@ -13,6 +17,7 @@ set wildignore+=*/.git/*,*/.idea/*,*/.DS_Store,bower_components/*,node_modules/*
 if executable("git") != 1 && !filereadable($HOME."/.dotfiles/bundle/vundle/README.md")
     echo "GIT is required to install bundles:"
 else
+    source $HOME/.dotfiles/vim/startup/color.vim
     source $HOME/.dotfiles/vim/startup/bundles.vim
 	source $HOME/.dotfiles/vim/startup/settings.vim
     source $HOME/.dotfiles/vim/startup/mappings.vim

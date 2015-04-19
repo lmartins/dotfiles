@@ -37,7 +37,7 @@ Plugin 'vim-scripts/ZoomWin'
 " Plugin 'vim-scripts/delimitMate.vim'
 Plugin 'vim-scripts/matchit.zip'
 " Plugin 'vim-scripts/vimwiki'
-Plugin 'bling/vim-airline'
+" Plugin 'bling/vim-airline'
 Plugin 'xolox/vim-easytags'
 Plugin 'xolox/vim-misc'
 Plugin 'henrik/vim-qargs'
@@ -55,7 +55,7 @@ Plugin 'mhinz/vim-startify'
 " Plugin 'nelstrom/vim-visual-star-search'
 Plugin 'moll/vim-bbye'
 Bundle 'mbadran/headlights'
-
+Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 
 
 " Syntax
