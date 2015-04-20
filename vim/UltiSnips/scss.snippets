@@ -20,11 +20,11 @@ snippet is "Increase Specificity"
 endsnippet
 
 snippet + "include"
-@include
+@include $1;
 endsnippet
 
 snippet ex "extends"
-@extend
+@extend $1;
 endsnippet
 
 snippet rm "respond-min"
@@ -67,6 +67,12 @@ snippet mqt "MQ: Tablet"
 @include tablet{
 	$1
 }$2
+endsnippet
+
+snippet mqf "MQ: From"
+@include mq($from: $1){
+	$2
+}$3
 endsnippet
 
 snippet mqu "MQ: Until"
@@ -124,7 +130,11 @@ snippet cgc "Color - Get Color"
 color: gc($1,$2);$3
 endsnippet
 
-snippet bgc "Background - Get Color"
+snippet bggc "Background - Get Color"
 background-color: gc($1,$2);$3
+endsnippet
+
+snippet links "Link Colors"
+@include link-colors( gc(link), gc(link, hover) );
 endsnippet
 
