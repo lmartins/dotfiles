@@ -40,7 +40,8 @@ nnoremap <leader><space> :CtrlPBuffer<cr>
 " -----------------------------------------------------------------------------
 " EASYMOTION
 " -----------------------------------------------------------------------------
-let g:EasyMotion_leader_key = ',m'
+" let g:EasyMotion_leader_key = ','
+map <Leader> <Plug>(easymotion-prefix)
 " map <Leader> <Plug>(easymotion-prefix)
 
 
