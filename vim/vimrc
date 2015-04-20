@@ -17,7 +17,6 @@ set wildignore+=*/.git/*,*/.idea/*,*/.DS_Store,bower_components/*,node_modules/*
 if executable("git") != 1 && !filereadable($HOME."/.dotfiles/bundle/vundle/README.md")
     echo "GIT is required to install bundles:"
 else
-    " source $HOME/.dotfiles/vim/startup/color.vim
     source $HOME/.dotfiles/vim/startup/bundles.vim
 	source $HOME/.dotfiles/vim/startup/settings.vim
     source $HOME/.dotfiles/vim/startup/mappings.vim

@@ -57,12 +57,15 @@ Plugin 'mhinz/vim-startify'
 Plugin 'moll/vim-bbye'
 Bundle 'mbadran/headlights'
 Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+Plugin 'sickill/vim-pasta'
+Plugin 'ap/vim-css-color'
 
 
 " Syntax
 Plugin 'othree/html5.vim'
 Plugin 'evidens/vim-twig'
 Plugin 'pangloss/vim-javascript'
+Plugin 'jelera/vim-javascript-syntax'
 Plugin 'nono/jquery.vim'
 Plugin 'cakebaker/scss-syntax.vim'
 Plugin 'hail2u/vim-css3-syntax'

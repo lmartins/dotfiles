@@ -3,12 +3,12 @@
 " AIRLINE CONFIG
 " -----------------------------------------------------------------------------
 " let g:airline#extensions#tabline#enabled = 1
-let g:airline_powerline_fonts = 1
-" let g:airline_right_sep=''
 " let g:airline_left_sep=''
-" let g:airline_left_sep = '▶'
-let g:airline#extensions#tabline#left_sep = ' '
-let g:airline#extensions#tabline#left_alt_sep = '|'
+" let g:airline_right_sep=''
+let g:airline_powerline_fonts=1
+let g:airline_left_sep=''
+let g:airline_right_sep=''
+let g:airline_theme='base16'
 
 " -----------------------------------------------------------------------------
 " POWERLINE
@@ -54,6 +54,15 @@ let g:user_emmet_mode='a'    "enable all function in all modes.
 let g:user_emmet_expandabbr_key = '<D-e>'
 let g:user_emmet_next_key = '<C-f>'
 " let g:user_emmet_prev_key = '<C-F>'
+
+
+"------------------------------------------------------------------------------
+" FUGITIVE
+"------------------------------------------------------------------------------
+" nmap <silent> <leader>gs :Gstatus<cr>
+" nmap <leader>ge :Gedit<cr>
+" nmap <silent><leader>gr :Gread<cr>
+" nmap <silent><leader>gb :Gblame<cr>
 
 
 "------------------------------------------------------------------------------
@@ -146,9 +155,15 @@ let g:tagbar_type_css = {
 "-----------------------------------------------------------------------------
 " NERD TREE
 "-----------------------------------------------------------------------------
+" close NERDTree after a file is opened
+let g:NERDTreeQuitOnOpen=0
+" Toggle NERDTree
+" nmap <silent> <leader>k :NERDTreeToggle<cr>
+" expand to the path of the file in the current buffer
+
 nnoremap <F10> :NERDTreeToggle<cr>
 imap <F10> <Esc>:NERDTreeToggle<cr>i
-nmap ,r :NERDTreeFind<CR>
+nmap <silent> <leader>r :NERDTreeFind<cr>
 nnoremap <F2> :GundoToggle<CR>
 imap <F2> <Esc>:GundoToggle<cr>i
 nnoremap <silent> <F3> :YRShow<cr>
