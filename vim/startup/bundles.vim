@@ -59,6 +59,7 @@ Bundle 'mbadran/headlights'
 Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 Plugin 'sickill/vim-pasta'
 Plugin 'ap/vim-css-color'
+Plugin 'zefei/vim-colortuner'
 
 
 " Syntax
