@@ -81,9 +81,9 @@ snippet italic "font-style: italic"
 font-style: italic;
 endsnippet
 
-snippet fs "font-size: 1em"
-font-size: ${1:1em};$0
-endsnippet
+# snippet fs "font-size: 1em"
+# font-size: ${1:1em};$0
+# endsnippet
 
 snippet va "vertical-align"
 vertical-align: ${1:top|bottom|baseline|middle};$0
@@ -467,7 +467,7 @@ endsnippet
 
 snippet com "Comment Style 1"
 /* =============================================================================
-   ${1} 
+   ${1}
    ========================================================================== */
 endsnippet
 
@@ -511,8 +511,8 @@ endsnippet
 snippet fface "Font Face"
 @font-face {
 	font-family: '${1}';
-	src: url('${2}.eot?#iefix') format('embedded-opentype'), 
-	     url('${3:$2}.woff') format('woff'), 
+	src: url('${2}.eot?#iefix') format('embedded-opentype'),
+	     url('${3:$2}.woff') format('woff'),
 	     url('${4:$2}.ttf')  format('truetype'),
 	     url('${5:$2}.svg#svgFontName') format('svg');
 }

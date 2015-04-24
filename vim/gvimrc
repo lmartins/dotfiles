@@ -26,7 +26,8 @@ set background=dark
 " colorscheme Tomorrow-Night
 " colorscheme Atom
 " colorscheme corporation
-colorscheme base16-ateliersulphurpool
+" colorscheme base16-ateliersulphurpoolflat
+colorscheme base16-flat
 " colorscheme Hornet
 " colorscheme Hybrid
 " colorscheme Saturn
