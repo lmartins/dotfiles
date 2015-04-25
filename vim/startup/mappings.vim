@@ -21,6 +21,7 @@
 nnoremap <space> /
 nnoremap <S-space> ?
 
+
 "Map for removing search highlighting
 nnoremap <silent> <leader><cr> :noh<cr>
 
@@ -90,6 +91,11 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
+" Moving around tabs with Alt + Arrows
+" map <A-LEFT> :wincmd h<CR>
+" map <A-RIGHT> :wincmd l<CR>
+" map <A-UP> :wincmd k<CR>
+" map <A-DOWN> :wincmd j<CR>
 
 "-----------------------------------------------------------------------------
 " CODE NAVIGATION
