@@ -1,2 +1,4 @@
-
+.netrwhist
+vim/vim.symlink/bundle/
+npm-debug.log
 .DS_Store
