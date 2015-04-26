@@ -36,12 +36,6 @@ set viminfo+=n$HOME/.vim/tmp/viminfo
 
 
 
-"Changes leader from \ to ,
-let mapleader = ","
-
-"Map : to ; (then remap ;) -- massive pinky-saver
-" noremap ; :
-" noremap <M-;> ;
 
 "More useful command-line completion
 set wildmode=list:longest

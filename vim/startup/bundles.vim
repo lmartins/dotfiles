@@ -18,7 +18,7 @@ Plugin 'briandoll/change-inside-surroundings.vim'
 " Plugin 'wincent/Command-T'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'ervandew/supertab'
-Plugin 'gcmt/wildfire.vim'
+" Plugin 'gcmt/wildfire.vim'
 Plugin 'godlygeek/tabular'
 Plugin 'gregsexton/MatchTag'
 Plugin 'lokaltog/vim-easymotion'
@@ -60,6 +60,7 @@ Bundle 'mbadran/headlights'
 Plugin 'sickill/vim-pasta'
 Plugin 'ap/vim-css-color'
 Plugin 'zefei/vim-colortuner'
+Plugin 'terryma/vim-expand-region'
 
 
 " Syntax

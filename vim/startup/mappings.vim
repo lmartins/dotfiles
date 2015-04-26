@@ -3,6 +3,16 @@
 " INTERFACE
 "-----------------------------------------------------------------------------
 
+"Changes leader from \ to ,
+let mapleader = "\<Space>"
+" let mapleader = ","
+
+"Map : to ; (then remap ;) -- massive pinky-saver
+" noremap ; :
+" noremap <M-;> ;
+
+
+
 " Unmap the arrow keys
 " no <down> <Nop>
 " no <left> <Nop>
@@ -18,8 +28,8 @@
 " vno <up> <Nop>
 
 "Map space to search and shift-space to backwards search
-nnoremap <space> /
-nnoremap <S-space> ?
+nnoremap <S-space> /
+" nnoremap <S-space> ?
 
 
 "Map for removing search highlighting

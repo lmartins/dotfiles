@@ -8,7 +8,7 @@
 let g:airline_powerline_fonts=1
 " let g:airline_left_sep=''
 " let g:airline_right_sep=''
-" let g:airline_theme='base16'
+let g:airline_theme='base16'
 
 " -----------------------------------------------------------------------------
 " POWERLINE
@@ -32,6 +32,7 @@ set runtimepath^=~/.vim/bundle/ctrlp.vim
 let g:ctrlp_working_path_mode = ''
 let g:ctrlp_custom_ignore = '\v[\/](jspm_packages|node_modules|bower_components|dist|build)|(\.(swp|ico|git|svn))$'
 
+nnoremap <Leader>o :CtrlP<CR>
 nnoremap <leader>. :CtrlPTag<cr>
 nnoremap <leader><space> :CtrlPBuffer<cr>
 
@@ -54,6 +55,14 @@ let g:user_emmet_mode='a'    "enable all function in all modes.
 let g:user_emmet_expandabbr_key = '<D-e>'
 let g:user_emmet_next_key = '<C-f>'
 " let g:user_emmet_prev_key = '<C-F>'
+
+
+
+" -----------------------------------------------------------------------------
+" VIM EXPAND REGION
+" -----------------------------------------------------------------------------
+vmap v <Plug>(expand_region_expand)
+vmap <C-v> <Plug>(expand_region_shrink)
 
 
 "------------------------------------------------------------------------------
@@ -179,7 +188,7 @@ let NERDTreeIgnore=['.git[[dir]]', 'node_modules', 'bower_components', 'jspm_pac
 " -----------------------------------------------------------------------------
 " WILDFIRE QUICK SELECT
 " -----------------------------------------------------------------------------
-nmap <leader>s <Plug>(wildfire-quick-select)
+" nmap <leader>s <Plug>(wildfire-quick-select)
 " use '*' to mean 'all other filetypes'
 " in this example, html and xml share the same text objects
 " let g:wildfire_objects = {
