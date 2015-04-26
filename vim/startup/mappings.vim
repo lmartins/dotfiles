@@ -13,9 +13,8 @@
 "-----------------------------------------------------------------------------
 
 "Changes leader from \ to ,
-let mapleader = "\<Space>"
-" let mapleader = ","
-
+" let mapleader = "\<Space>"
+let mapleader = ","
 
 " Unmap the arrow keys
 " no <down> <Nop>
@@ -32,8 +31,8 @@ let mapleader = "\<Space>"
 " vno <up> <Nop>
 
 "Map shift-space to search and shift-space to backwards search
-nnoremap <S-space> /
-" nnoremap <S-space> ?
+nnoremap <space> /
+nnoremap <S-space> ?
 
 "Toggle to different paste modes
 nnoremap \t :set expandtab tabstop=4 shiftwidth=4 softtabstop=4<CR>
