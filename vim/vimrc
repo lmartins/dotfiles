@@ -1,8 +1,21 @@
 
 
+" Check if git is available and if vundle is already installed
+if executable("git") != 1 && !filereadable($HOME."/.dotfiles/bundle/vundle/README.md")
+	echo "GIT is required to install bundles:"
+else
+
+	source $HOME/.dotfiles/vim/startup/bundles.vim
+	source $HOME/.dotfiles/vim/startup/settings.vim
+	source $HOME/.dotfiles/vim/startup/mappings.vim
+	source $HOME/.dotfiles/vim/startup/plugins.vim
+	source $HOME/.dotfiles/vim/startup/syntax.vim
+
+endif
+
 
 "-----------------------------------------------------------------------------
-" SETUP
+" INTERFACE
 "-----------------------------------------------------------------------------
 
 "The super basic stuff:
@@ -16,20 +29,26 @@ set termencoding=utf-8
 set wildignore+=*/.git/*,*/.idea/*,*/.DS_Store,bower_components/*,node_modules/*,jspm_packages/*,build/*
 
 
-" Check if git is available and if vundle is already installed
-if executable("git") != 1 && !filereadable($HOME."/.dotfiles/bundle/vundle/README.md")
-    echo "GIT is required to install bundles:"
-else
-    source $HOME/.dotfiles/vim/startup/bundles.vim
-	source $HOME/.dotfiles/vim/startup/settings.vim
-    source $HOME/.dotfiles/vim/startup/mappings.vim
-    source $HOME/.dotfiles/vim/startup/plugins.vim
-    source $HOME/.dotfiles/vim/startup/syntax.vim
-    " source $HOME/.dotfiles/vim/startup/status-line.vim
-    " source $HOME/.dotfiles/vim/startup/autocomplete.vim
-    " source $HOME/.dotfiles/vim/startup/php.vim
-    " source $HOME/.dotfiles/vim/startup/html.vim
-endif
+
+
+" COLORSCHEME
+set background=dark
+" set background=light
+" colorscheme Mustang
+" colorscheme Obsidian2
+" colorscheme Solarized
+" colorscheme Tomorrow
+" colorscheme Tomorrow-Night
+" colorscheme Atom
+" colorscheme corporation
+" colorscheme base16-ateliersulphurpoolflat
+colorscheme base16-flat
+" colorscheme Hornet
+" colorscheme Hybrid
+" colorscheme Saturn
+" color molokai
+
+
 
 
 
@@ -107,3 +126,4 @@ endif
 if filereadable(glob("$HOME/.vimrc.local"))
   source $HOME/.vimrc.local
 endif
+

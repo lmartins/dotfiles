@@ -6,34 +6,13 @@ set guioptions-=R           "Do not use scrollbars
 set guioptions-=l           "Do not use scrollbars
 set guioptions-=L           "Do not use scrollbars
 set linespace=6             "More vertical space
-" set guifont=Fira\ Mono:h12  "Set font type and size.
+set guifont=Fira\ Mono:h12  "Set font type and size.
 " set guifont=Fira\ Powerline:h12  "Set font type and size.
-set guifont=Inconsolata\ for\ Powerline:h14
+" set guifont=Inconsolata\ for\ Powerline:h14
 set fuopt=maxvert,maxhorz   "Sets max height when entering fullscreen
 set fuopt=background:Normal "Set fullscreen bg to match the text bg
 
 :if expand("%") == ""|browse confirm w|else|confirm w|endif
-
-
-
-" Colorscheme
-set background=dark
-" set background=light
-" colorscheme Mustang
-" colorscheme Obsidian2
-" colorscheme Solarized
-" colorscheme Tomorrow
-" colorscheme Tomorrow-Night
-" colorscheme Atom
-" colorscheme corporation
-" colorscheme base16-ateliersulphurpoolflat
-colorscheme base16-flat
-" colorscheme Hornet
-" colorscheme Hybrid
-" colorscheme Saturn
-" color molokai
-
-
 
 
 " Mac Specific Keybindings
@@ -44,6 +23,7 @@ colorscheme base16-flat
 " Command-Return for fullscreen
 " macmenu Window.Toggle\ Full\ Screen\ Mode key=<D-CR>
 macmenu File.New\ Tab key=<nop>
+macmenu Tools.Make key=<nop>
 
 " Darn semi-colons, make my life a little easier, but first unmap <D-;>
 macmenu &Tools.Spelling.To\ Next\ error key=<nop>
@@ -80,14 +60,3 @@ imap <D-R> <esc>:WriterToggle<CR>
 set lines=999               "Sets new windows to full-height
 set cursorline              "Highlights the line the cursor is on
 
-" Resize to fill screen
-" nnoremap <F16> :set lines=999 columns=999<cr>
-"inoremap <F16> <esc>:set lines=999 columns=999<cr>a
-
-" Resize to tall narrow
-"nnoremap <F17> :set lines=999 columns=100<cr>
-"inoremap <F17> <esc>:set lines=999 columns=100<cr>a
-
-" Resize to tallest
-"nnoremap <F18> :set lines=999<cr>
-"inoremap <F18> <esc>:set lines=999<cr>a
