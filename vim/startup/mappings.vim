@@ -1,3 +1,12 @@
+"-----------------------------------------------------------------------------
+" KEYS INDEX
+" A - Alt
+" M - Alt
+" D - Command
+" C - Control
+" S - Shift
+"-----------------------------------------------------------------------------
+
 
 "-----------------------------------------------------------------------------
 " INTERFACE
@@ -6,11 +15,6 @@
 "Changes leader from \ to ,
 let mapleader = "\<Space>"
 " let mapleader = ","
-
-"Map : to ; (then remap ;) -- massive pinky-saver
-" noremap ; :
-" noremap <M-;> ;
-
 
 
 " Unmap the arrow keys
@@ -27,10 +31,20 @@ let mapleader = "\<Space>"
 " vno <right> <Nop>
 " vno <up> <Nop>
 
-"Map space to search and shift-space to backwards search
+"Map shift-space to search and shift-space to backwards search
 nnoremap <S-space> /
 " nnoremap <S-space> ?
 
+"Toggle to different paste modes
+nnoremap \t :set expandtab tabstop=4 shiftwidth=4 softtabstop=4<CR>
+nnoremap \R :set noexpandtab tabstop=4 shiftwidth=4 softtabstop=4<CR>
+nnoremap \m :set expandtab tabstop=2 shiftwidth=4 softtabstop=4<CR>
+
+" Fix indentation on file
+map <F7> mzgg=G`z<CR>
+
+"Toggle wrap mode
+nnoremap \w :setlocal wrap!<CR>:setlocal wrap?<CR>
 
 "Map for removing search highlighting
 nnoremap <silent> <leader><cr> :noh<cr>
@@ -66,15 +80,11 @@ inoremap <D-b> <esc><C-^>
 nnoremap n nzz
 nnoremap N Nzz
 
-
 " Close buffers without closing window
 :nnoremap <Leader>q :Bdelete<CR>
 
 " Search documentation in Dash.app (OSX only)
 nmap <silent> <leader>d <Plug>DashSearch
-
-" Switch between the last two files
-nnoremap <leader><leader> <c-^>
 
 " bind K to grep word under cursor
 nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
@@ -125,8 +135,8 @@ nnoremap <silent> <Leader>c :ChangeInsideSurrounding<CR>
 nnoremap <silent> <Leader>C :ChangeAroundSurrounding<CR>
 
 " Move to next/previous line with same indentation
-" nnoremap <M-,> :call search('^'. matchstr(getline('.'), '\(^\s*\)') .'\%<' . line('.') . 'l\S', 'be')<CR>
-" nnoremap <M-.> :call search('^'. matchstr(getline('.'), '\(^\s*\)') .'\%>' . line('.') . 'l\S', 'e')<CR>
+nnoremap <C-k> :call search('^'. matchstr(getline('.'), '\(^\s*\)') .'\%<' . line('.') . 'l\S', 'be')<CR>
+nnoremap <C-j> :call search('^'. matchstr(getline('.'), '\(^\s*\)') .'\%>' . line('.') . 'l\S', 'e')<CR>
 
 
 "-----------------------------------------------------------------------------
@@ -151,7 +161,7 @@ nnoremap <C-A-up> YPj
 xnoremap <C-A-up> y`<Pgv
 
 "Select a line without trailing whitespace or linebreaks
-" nnoremap <leader>l <esc>^vg_
+nnoremap <leader>l <esc>^vg_
 
 "Open line above (ctrl-shift-o much easier than ctrl-o shift-O)
 "SO USEFUL!!!

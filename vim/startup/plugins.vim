@@ -64,6 +64,15 @@ let g:user_emmet_next_key = '<C-f>'
 vmap v <Plug>(expand_region_expand)
 vmap <C-v> <Plug>(expand_region_shrink)
 
+" " Extend the global default (NOTE: Remove comments in dictionary before sourcing)
+" call expand_region#custom_text_objects({
+"       " \ "\/\\n\\n\<CR>": 1,
+"       " \ 'a]' :1,
+"       " \ 'ab' :1,
+"       " \ 'aB' :1,
+"       \ 'ii' :0,
+"       \ 'ai' :0,
+"       \ })
 
 "------------------------------------------------------------------------------
 " FUGITIVE

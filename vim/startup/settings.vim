@@ -134,16 +134,3 @@ set showbreak=+\
 "Toggle paste
 set pastetoggle=<F4>
 
-"Toggle to different paste modes
-nnoremap \t :set expandtab tabstop=4 shiftwidth=4 softtabstop=4<CR>
-nnoremap \R :set noexpandtab tabstop=4 shiftwidth=4 softtabstop=4<CR>
-nnoremap \m :set expandtab tabstop=2 shiftwidth=4 softtabstop=4<CR>
-
-
-" Fix indentation on file
-map <F7> mzgg=G`z<CR>
-
-"Toggle wrap mode
-nnoremap \w :setlocal wrap!<CR>:setlocal wrap?<CR>
-
-

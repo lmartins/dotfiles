@@ -61,6 +61,7 @@ Plugin 'sickill/vim-pasta'
 Plugin 'ap/vim-css-color'
 Plugin 'zefei/vim-colortuner'
 Plugin 'terryma/vim-expand-region'
+Plugin 'kana/vim-textobj-indent'
 
 
 " Syntax
