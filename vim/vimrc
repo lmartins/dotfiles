@@ -42,7 +42,8 @@ set background=dark
 " colorscheme Atom
 " colorscheme corporation
 " colorscheme base16-ateliersulphurpoolflat
-colorscheme base16-flat
+" colorscheme base16-flat
+colorscheme base16-ocean
 " colorscheme Hornet
 " colorscheme Hybrid
 " colorscheme Saturn
