@@ -72,8 +72,9 @@ nmap <leader>et :tabe %%
 nnoremap <silent> <D-d> :cd %:p:h<cr
 
 "Jump back to last edited buffer
-nnoremap <D-b> <C-^>
-inoremap <D-b> <esc><C-^>
+" nnoremap <D-b> <C-^>
+" inoremap <D-b> <esc><C-^>
+nnoremap <leader><leader> <c-^>
 
 " Keep search matches in the middle of the screen
 nnoremap n nzz

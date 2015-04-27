@@ -75,9 +75,10 @@ vmap <C-v> <Plug>(expand_region_shrink)
 "       \ })
 
 "------------------------------------------------------------------------------
-" FUGITIVE
-"------------------------------------------------------------------------------
+" " FUGITIVE
+" "------------------------------------------------------------------------------
 nmap <silent> <leader>gs :Gstatus<cr>
+nmap <silent> <leader>gc :Gcommit<cr>
 nmap <leader>ge :Gedit<cr>
 nmap <silent><leader>gr :Gread<cr>
 nmap <silent><leader>gb :Gblame<cr>
