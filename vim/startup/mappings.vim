@@ -135,8 +135,9 @@ nnoremap <silent> <Leader>c :ChangeInsideSurrounding<CR>
 nnoremap <silent> <Leader>C :ChangeAroundSurrounding<CR>
 
 " Move to next/previous line with same indentation
-nnoremap <C-k> :call search('^'. matchstr(getline('.'), '\(^\s*\)') .'\%<' . line('.') . 'l\S', 'be')<CR>
-nnoremap <C-j> :call search('^'. matchstr(getline('.'), '\(^\s*\)') .'\%>' . line('.') . 'l\S', 'e')<CR>
+" ALT + K / J
+nnoremap <M-k> :call search('^'. matchstr(getline('.'), '\(^\s*\)') .'\%<' . line('.') . 'l\S', 'be')<CR>
+nnoremap <M-j> :call search('^'. matchstr(getline('.'), '\(^\s*\)') .'\%>' . line('.') . 'l\S', 'e')<CR>
 
 
 "-----------------------------------------------------------------------------

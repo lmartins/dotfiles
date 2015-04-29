@@ -62,6 +62,7 @@ Plugin 'ap/vim-css-color'
 Plugin 'zefei/vim-colortuner'
 Plugin 'terryma/vim-expand-region'
 Plugin 'kana/vim-textobj-indent'
+Plugin 'paranoida/vim-airlineish'
 
 
 " Syntax
@@ -75,6 +76,7 @@ Plugin 'hail2u/vim-css3-syntax'
 Plugin 'StanAngeloff/php.vim'
 Plugin 'shawncplus/phpcomplete.vim'
 Plugin 'mustache/vim-mustache-handlebars'
+Plugin 'stephanedemotte/beekai'
 "Plugin 'nathanlong/vim-markdown'
 
 
