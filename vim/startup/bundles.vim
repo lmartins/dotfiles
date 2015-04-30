@@ -76,9 +76,7 @@ Plugin 'hail2u/vim-css3-syntax'
 Plugin 'StanAngeloff/php.vim'
 Plugin 'shawncplus/phpcomplete.vim'
 Plugin 'mustache/vim-mustache-handlebars'
-Plugin 'stephanedemotte/beekai'
 "Plugin 'nathanlong/vim-markdown'
-
 
 " Colorschemes
 "Plugin 'nathanlong/vim-colors-solarized'
@@ -88,6 +86,8 @@ Plugin 'stephanedemotte/beekai'
 Plugin 'chriskempson/base16-vim'
 Plugin 'atelierbram/vim-colors_atelier-schemes'
 Plugin 'stulzer/heroku-colorscheme'
+" Plugin 'stephanedemotte/beekai'
+Plugin 'vim-scripts/obsidian2.vim'
 
 
 " Plugins that don't play well with the terminal
