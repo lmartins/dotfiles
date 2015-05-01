@@ -82,12 +82,10 @@ Plugin 'mustache/vim-mustache-handlebars'
 "Plugin 'nathanlong/vim-colors-solarized'
 " Plugin 'nathanlong/vim-colors-tomorrow'
 " Plugin 'nathanlong/vim-colors-writer'
-" Plugin 'flazz/vim-colorschemes'
+Plugin 'flazz/vim-colorschemes'
 Plugin 'chriskempson/base16-vim'
 Plugin 'atelierbram/vim-colors_atelier-schemes'
 Plugin 'stulzer/heroku-colorscheme'
-" Plugin 'stephanedemotte/beekai'
-Plugin 'vim-scripts/obsidian2.vim'
 
 
 " Plugins that don't play well with the terminal

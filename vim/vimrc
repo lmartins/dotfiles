@@ -35,7 +35,7 @@ set wildignore+=*/.git/*,*/.idea/*,*/.DS_Store,bower_components/*,node_modules/*
 set background=dark
 " set background=light
 " colorscheme Mustang
-colorscheme Obsidian2
+" colorscheme Obsidian2
 " colorscheme Solarized
 " colorscheme Tomorrow
 " colorscheme Tomorrow-Night
@@ -43,13 +43,14 @@ colorscheme Obsidian2
 " colorscheme corporation
 " colorscheme base16-ateliersulphurpoolflat
 " colorscheme base16-flat
+" colorscheme base16-tomorrow
 " colorscheme base16-ocean
 " colorscheme beekai
+colorscheme busybee
 " colorscheme Hornet
 " colorscheme Hybrid
 " colorscheme Saturn
 " color molokai
-
 
 
 
