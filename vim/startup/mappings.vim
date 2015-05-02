@@ -77,8 +77,11 @@ nnoremap <silent> <D-d> :cd %:p:h<cr
 nnoremap <leader><leader> <c-^>
 
 " Keep search matches in the middle of the screen
-nnoremap n nzz
-nnoremap N Nzz
+nmap G Gzz
+nmap n nzz
+nmap N Nzz
+nmap } }zz
+nmap { {zz
 
 " Close buffers without closing window
 :nnoremap <Leader>q :Bdelete<CR>
