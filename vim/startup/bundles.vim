@@ -10,14 +10,11 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 
 
-
-
-
 "Plugins
 Plugin 'briandoll/change-inside-surroundings.vim'
 " Plugin 'wincent/Command-T'
 Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'ervandew/supertab'
+" Plugin 'ervandew/supertab'
 " Plugin 'gcmt/wildfire.vim'
 Plugin 'godlygeek/tabular'
 Plugin 'gregsexton/MatchTag'
@@ -39,30 +36,30 @@ Plugin 'vim-scripts/ZoomWin'
 Plugin 'vim-scripts/matchit.zip'
 " Plugin 'vim-scripts/vimwiki'
 Plugin 'bling/vim-airline'
-Plugin 'xolox/vim-easytags'
+"Plugin 'xolox/vim-easytags'
 Plugin 'xolox/vim-misc'
 Plugin 'henrik/vim-qargs'
 Plugin 'xolox/vim-colorscheme-switcher'
 " Plugin 'Taverius/vim-colorscheme-manager'
-Plugin 'majutsushi/tagbar'
+"Plugin 'majutsushi/tagbar'
 Plugin 'rizzatti/dash.vim'
 " Plugin 'danro/rename.vim'
 Plugin 'lfilho/cosco.vim'
 Plugin 'Raimondi/delimitMate'
 Plugin 'tpope/vim-fugitive'
-" Plugin 'Valloric/YouCompleteMe'
+Plugin 'Valloric/YouCompleteMe'
 Plugin 'justinmk/vim-gtfo'
 Plugin 'mhinz/vim-startify'
 " Plugin 'nelstrom/vim-visual-star-search'
 Plugin 'moll/vim-bbye'
 Bundle 'mbadran/headlights'
-" Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 Plugin 'sickill/vim-pasta'
 Plugin 'ap/vim-css-color'
 Plugin 'zefei/vim-colortuner'
 Plugin 'terryma/vim-expand-region'
 Plugin 'kana/vim-textobj-indent'
 Plugin 'paranoida/vim-airlineish'
+Plugin 'zef/vim-cycle'
 
 
 " Syntax

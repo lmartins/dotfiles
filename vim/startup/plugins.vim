@@ -214,4 +214,10 @@ let NERDTreeIgnore=['.git[[dir]]', 'node_modules', 'bower_components', 'jspm_pac
 let g:UltiSnipsEditSplit="vertical"
 
 
+" -----------------------------------------------------------------------------
+" CYCLE
+" -----------------------------------------------------------------------------
+call AddCycleGroup( ['relative', 'absolute'] )
+
+
 
