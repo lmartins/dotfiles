@@ -11,11 +11,11 @@ let g:airline_powerline_fonts=1
 " let g:airline_theme='base16'
 let g:airline_theme = 'airlineish'
 
+
 " -----------------------------------------------------------------------------
-" POWERLINE
+" CYCLE
 " -----------------------------------------------------------------------------
-" set guifont=Inconsolata\ for\ Powerline:h15
-let g:Powerline_symbols = 'fancy'
+call AddCycleGroup( ['relative', 'absolute'] )
 
 
 " -----------------------------------------------------------------------------
@@ -38,13 +38,12 @@ nnoremap <leader>. :CtrlPTag<cr>
 nnoremap <leader><space> :CtrlPBuffer<cr>
 
 
-
 " -----------------------------------------------------------------------------
 " EASYMOTION
 " -----------------------------------------------------------------------------
-" let g:EasyMotion_leader_key = ','
+	" let g:EasyMotion_leader_key = ','
 map <Leader> <Plug>(easymotion-prefix)
-" map <Leader> <Plug>(easymotion-prefix)
+	" map <Leader> <Plug>(easymotion-prefix)
 
 
 " -----------------------------------------------------------------------------
@@ -56,6 +55,13 @@ let g:user_emmet_mode='a'    "enable all function in all modes.
 let g:user_emmet_expandabbr_key = '<D-e>'
 let g:user_emmet_next_key = '<C-f>'
 " let g:user_emmet_prev_key = '<C-F>'
+
+
+" -----------------------------------------------------------------------------
+" POWERLINE
+" -----------------------------------------------------------------------------
+" set guifont=Inconsolata\ for\ Powerline:h15
+let g:Powerline_symbols = 'fancy'
 
 
 
@@ -74,6 +80,7 @@ vmap <C-v> <Plug>(expand_region_shrink)
 "       \ 'ii' :0,
 "       \ 'ai' :0,
 "       \ })
+
 
 "------------------------------------------------------------------------------
 " " FUGITIVE
@@ -105,6 +112,14 @@ let delimitMate_expand_space = 1
 " calls iTerm instead of terminal
 let g:gtfo#terminals = { 'mac' : 'iterm' }
 
+
+" -----------------------------------------------------------------------------
+" OBVIOUS RESIZE
+" -----------------------------------------------------------------------------
+noremap <silent> <C-Up> :<C-U>ObviousResizeUp<CR>
+noremap <silent> <C-Down> :<C-U>ObviousResizeDown<CR>
+noremap <silent> <C-Left> :<C-U>ObviousResizeLeft<CR>
+noremap <silent> <C-Right> :<C-U>ObviousResizeRight<CR>
 
 
 "------------------------------------------------------------------------------
@@ -239,13 +254,9 @@ let g:UltiSnipsListSnippets="<c-e>"
 " this mapping Enter key to <C-y> to chose the current highlight item
 " and close the selection list, same as other IDEs.
 " CONFLICT with some plugins like tpope/Endwise
-inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+" inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 
 
-" -----------------------------------------------------------------------------
-" CYCLE
-" -----------------------------------------------------------------------------
-call AddCycleGroup( ['relative', 'absolute'] )
 
 
 

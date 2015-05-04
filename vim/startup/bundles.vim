@@ -60,7 +60,7 @@ Plugin 'terryma/vim-expand-region'
 Plugin 'kana/vim-textobj-indent'
 Plugin 'paranoida/vim-airlineish'
 Plugin 'zef/vim-cycle'
-
+Plugin 'talek/obvious-resize'
 
 " Syntax
 Plugin 'othree/html5.vim'
@@ -69,7 +69,7 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'jelera/vim-javascript-syntax'
 Plugin 'nono/jquery.vim'
 Plugin 'cakebaker/scss-syntax.vim'
-Plugin 'hail2u/vim-css3-syntax'
+" Plugin 'hail2u/vim-css3-syntax'
 Plugin 'StanAngeloff/php.vim'
 Plugin 'shawncplus/phpcomplete.vim'
 Plugin 'mustache/vim-mustache-handlebars'
