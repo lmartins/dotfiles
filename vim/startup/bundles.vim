@@ -61,6 +61,7 @@ Plugin 'kana/vim-textobj-indent'
 Plugin 'paranoida/vim-airlineish'
 Plugin 'zef/vim-cycle'
 Plugin 'talek/obvious-resize'
+Plugin 'jondkinney/dragvisuals.vim'
 
 " Syntax
 Plugin 'othree/html5.vim'
