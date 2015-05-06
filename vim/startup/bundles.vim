@@ -27,7 +27,8 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
 Plugin 'sjl/gundo.vim'
 Plugin 'terryma/vim-multiple-cursors'
-Plugin 'tpope/vim-commentary'
+" Plugin 'tpope/vim-commentary'
+Plugin 'scrooloose/nerdcommenter'
 Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-unimpaired'
@@ -75,6 +76,8 @@ Plugin 'StanAngeloff/php.vim'
 Plugin 'shawncplus/phpcomplete.vim'
 Plugin 'mustache/vim-mustache-handlebars'
 "Plugin 'nathanlong/vim-markdown'
+Plugin 'michaeljsmith/vim-indent-object'
+
 
 " Colorschemes
 "Plugin 'nathanlong/vim-colors-solarized'
