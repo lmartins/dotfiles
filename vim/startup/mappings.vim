@@ -11,9 +11,6 @@
 "-----------------------------------------------------------------------------
 " INTERFACE
 "-----------------------------------------------------------------------------
-
-"Changes leader from \ to ,
-" let mapleader = "\<Space>"
 let mapleader = ","
 
 " Unmap the arrow keys
@@ -115,10 +112,10 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
 " Moving around tabs with Alt + Arrows
-" map <A-LEFT> :wincmd h<CR>
-" map <A-RIGHT> :wincmd l<CR>
-" map <A-UP> :wincmd k<CR>
-" map <A-DOWN> :wincmd j<CR>
+map <A-LEFT> :wincmd h<CR>
+map <A-RIGHT> :wincmd l<CR>
+map <A-UP> :wincmd k<CR>
+map <A-DOWN> :wincmd j<CR>
 
 "-----------------------------------------------------------------------------
 " CODE NAVIGATION
