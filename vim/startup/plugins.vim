@@ -2,7 +2,7 @@
 " -----------------------------------------------------------------------------
 " AIRLINE CONFIG
 " -----------------------------------------------------------------------------
-" let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#enabled = 1
 " let g:airline_left_sep=''
 " let g:airline_right_sep=''
 let g:airline_powerline_fonts=1
@@ -41,18 +41,18 @@ nnoremap <leader><space> :CtrlPBuffer<cr>
 "-----------------------------------------------------------------------------
 " DRAGVISUALS
 "-----------------------------------------------------------------------------
-vmap  <expr>  <LEFT>   DVB_Drag('left')
-vmap  <expr>  <RIGHT>  DVB_Drag('right')
-vmap  <expr>  <DOWN>   DVB_Drag('down')
-vmap  <expr>  <UP>     DVB_Drag('up')
-vmap  <expr>  D        DVB_Duplicate()
+"vmap  <expr>  <LEFT>   DVB_Drag('left')
+"vmap  <expr>  <RIGHT>  DVB_Drag('right')
+"vmap  <expr>  <DOWN>   DVB_Drag('down')
+"vmap  <expr>  <UP>     DVB_Drag('up')
+"vmap  <expr>  D        DVB_Duplicate()
 
 " -----------------------------------------------------------------------------
 " EASYMOTION
 " -----------------------------------------------------------------------------
-	" let g:EasyMotion_leader_key = ','
+" let g:EasyMotion_leader_key = ','
 map <Leader> <Plug>(easymotion-prefix)
-	" map <Leader> <Plug>(easymotion-prefix)
+" map <Leader> <Plug>(easymotion-prefix)
 
 
 " -----------------------------------------------------------------------------
@@ -125,10 +125,10 @@ let g:gtfo#terminals = { 'mac' : 'iterm' }
 " -----------------------------------------------------------------------------
 " OBVIOUS RESIZE
 " -----------------------------------------------------------------------------
-noremap <silent> <C-Up> :<C-U>ObviousResizeUp<CR>
-noremap <silent> <C-Down> :<C-U>ObviousResizeDown<CR>
-noremap <silent> <C-Left> :<C-U>ObviousResizeLeft<CR>
-noremap <silent> <C-Right> :<C-U>ObviousResizeRight<CR>
+"noremap <silent> <C-Up> :<C-U>ObviousResizeUp<CR>
+"noremap <silent> <C-Down> :<C-U>ObviousResizeDown<CR>
+"noremap <silent> <C-Left> :<C-U>ObviousResizeLeft<CR>
+"noremap <silent> <C-Right> :<C-U>ObviousResizeRight<CR>
 
 
 "------------------------------------------------------------------------------

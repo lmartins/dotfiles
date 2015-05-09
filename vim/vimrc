@@ -25,6 +25,8 @@ set t_Co=256
 set fillchars+=stl:\ ,stlnc:\
 set termencoding=utf-8
 
+set lines=999               "Sets new windows to full-height
+set cursorline              "Highlights the line the cursor is on
 
 set wildignore+=*/.git/*,*/.idea/*,*/.DS_Store,bower_components/*,node_modules/*,jspm_packages/*,build/*
 
@@ -33,24 +35,24 @@ set wildignore+=*/.git/*,*/.idea/*,*/.DS_Store,bower_components/*,node_modules/*
 
 " COLORSCHEME
 set background=dark
-" set background=light
-" colorscheme Mustang
-" colorscheme Obsidian2
-" colorscheme Solarized
-" colorscheme Tomorrow
-" colorscheme Tomorrow-Night
-" colorscheme Atom
-" colorscheme corporation
-" colorscheme base16-ateliersulphurpoolflat
-" colorscheme base16-flat
-" colorscheme base16-tomorrow
-" colorscheme base16-ocean
-" colorscheme beekai
-colorscheme busybee
-" colorscheme Hornet
-" colorscheme Hybrid
-" colorscheme Saturn
-" color molokai
+"set background=light
+"colorscheme Mustang
+"colorscheme Obsidian2
+"colorscheme Solarized
+"colorscheme Tomorrow
+"colorscheme Tomorrow-Night
+colorscheme Atom
+"colorscheme corporation
+"colorscheme base16-ateliersulphurpoolflat
+"colorscheme base16-flat
+"colorscheme base16-tomorrow
+"colorscheme base16-ocean
+"colorscheme beekai
+"colorscheme busybee
+"colorscheme Hornet
+"colorscheme Hybrid
+"colorscheme Saturn
+"color molokai
 
 
 

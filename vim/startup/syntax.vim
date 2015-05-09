@@ -10,6 +10,7 @@ if has("autocmd")
     " au FileType html,xhtml,css,scss,ruby,eruby,liquid,pml,yaml,php,coffee,vim setlocal ts=2 sts=2 sw=2 expandtab
     au FileType javascript setlocal ts=4 sts=4 sw=4 noexpandtab
     au FileType css,scss,sass setlocal iskeyword+=-
+	au FileType css,scss,sass setlocal iskeyword-=_
     au FileType markdown setlocal spell
 
 	" Use emmet only for html and css files

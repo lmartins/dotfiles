@@ -36,9 +36,6 @@ nnoremap \t :set expandtab tabstop=4 shiftwidth=4 softtabstop=4<CR>
 nnoremap \R :set noexpandtab tabstop=4 shiftwidth=4 softtabstop=4<CR>
 nnoremap \m :set expandtab tabstop=2 shiftwidth=4 softtabstop=4<CR>
 
-" Fix indentation on file
-map <F7> mzgg=G`z<CR>
-
 "Toggle wrap mode
 nnoremap \w :setlocal wrap!<CR>:setlocal wrap?<CR>
 
@@ -69,9 +66,13 @@ nmap <leader>et :tabe %%
 nnoremap <silent> <D-d> :cd %:p:h<cr
 
 "Jump back to last edited buffer
-" nnoremap <D-b> <C-^>
-" inoremap <D-b> <esc><C-^>
-nnoremap <leader><leader> <c-^>
+nnoremap <D-b> <C-^>
+inoremap <D-b> <esc><C-^>
+"nnoremap <leader><leader> <c-^>
+
+" Control P like sublime text
+map <D-t> :CtrlP<cr>
+map <D-T> :CtrlPBuffer<cr>
 
 " Keep search matches in the middle of the screen
 nmap G Gzz
@@ -79,6 +80,8 @@ nmap n nzz
 nmap N Nzz
 nmap } }zz
 nmap { {zz
+nmap g; g;zz
+nmap g, g,zz
 
 " Close buffers without closing window
 :nnoremap <Leader>q :Bdelete<CR>
@@ -101,6 +104,8 @@ inoremap <D-]> <esc>>>A
 xnoremap <D-[> <gv
 xnoremap <D-]> >gv
 
+" Fix indentation on file
+map <F7> mzgg=G`z<CR>
 
 "-----------------------------------------------------------------------------
 " WINDOW NAVIGATION
@@ -112,10 +117,10 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
 " Moving around tabs with Alt + Arrows
-map <A-LEFT> :wincmd h<CR>
-map <A-RIGHT> :wincmd l<CR>
-map <A-UP> :wincmd k<CR>
-map <A-DOWN> :wincmd j<CR>
+"map <A-LEFT> :wincmd h<CR>
+"map <A-RIGHT> :wincmd l<CR>
+"map <A-UP> :wincmd k<CR>
+"map <A-DOWN> :wincmd j<CR>
 
 "-----------------------------------------------------------------------------
 " CODE NAVIGATION
@@ -136,13 +141,29 @@ nnoremap <silent> <Leader>C :ChangeAroundSurrounding<CR>
 
 " Move to next/previous line with same indentation
 " ALT + K / J
-nnoremap <M-k> :call search('^'. matchstr(getline('.'), '\(^\s*\)') .'\%<' . line('.') . 'l\S', 'be')<CR>
-nnoremap <M-j> :call search('^'. matchstr(getline('.'), '\(^\s*\)') .'\%>' . line('.') . 'l\S', 'e')<CR>
+"nnoremap <M-k> :call search('^'. matchstr(getline('.'), '\(^\s*\)') .'\%<' . line('.') . 'l\S', 'be')<CR>
+"nnoremap <M-j> :call search('^'. matchstr(getline('.'), '\(^\s*\)') .'\%>' . line('.') . 'l\S', 'e')<CR>
 
 
 "-----------------------------------------------------------------------------
 " CODE MANIPULATION
 "-----------------------------------------------------------------------------
+
+" Command-Shift-F for Ack
+map <D-F> :Ag<space>
+
+" D-L use for copy-line command
+map <D-l> <esc>^vg_"+y
+imap <D-l> <esc>^vg_"+y
+
+
+" Darn semi-colons, make my life a little easier, but first unmap <D-;>
+imap <D-;> <esc>A;
+nmap <D-;> A;
+
+" Commentary controls like Sublime Text
+nmap <D-/> \\\
+vmap <D-/> \\
 
 " Auto indent when opening brackets and moving to a new line
 inoremap <C-Return> <Esc>$T{i<CR><CR><C-o>k<Tab>
@@ -166,8 +187,8 @@ nnoremap <leader>l <esc>^vg_
 
 "Open line above (ctrl-shift-o much easier than ctrl-o shift-O)
 "SO USEFUL!!!
-inoremap <C-Enter> <C-o>o
-inoremap <C-S-Enter> <C-o>O
+inoremap <C-Enter> [<space>
+inoremap <C-S-Enter> ]<space>
 
 " Move visual block
 vnoremap J :m '>+1<CR>gv=gv
