@@ -31,8 +31,6 @@ macmenu &Tools.Spelling.To\ Next\ error key=<nop>
 " macmenu &Tools.Make key=<nop>
 
 
-
-
 " Writer
 "map <D-R> :WriterToggle<CR>
 "imap <D-R> <esc>:WriterToggle<CR>

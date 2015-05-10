@@ -50,9 +50,8 @@ nnoremap <leader><space> :CtrlPBuffer<cr>
 " -----------------------------------------------------------------------------
 " EASYMOTION
 " -----------------------------------------------------------------------------
-" let g:EasyMotion_leader_key = ','
+let g:EasyMotion_leader_key = ','
 map <Leader> <Plug>(easymotion-prefix)
-" map <Leader> <Plug>(easymotion-prefix)
 
 
 " -----------------------------------------------------------------------------
@@ -178,12 +177,12 @@ set statusline=\ %f\ %m\ %r%=%{SyntasticStatuslineFlag()}\ \ \ %y%12.12(%l\,\ %c
 " -----------------------------------------------------------------------------
 " TABULARIZE Mappings
 
-if exists(":Tabularize")
+"if exists(":Tabularize")
 	nmap <Leader>a= :Tabularize /=<CR>
 	vmap <Leader>a= :Tabularize /=<CR>
-	nmap <Leader>a: :Tabularize /:\zs<CR>
-	vmap <Leader>a: :Tabularize /:\zs<CR>
-endif
+	nmap <Leader>a: :Tabularize /:<CR>
+	vmap <Leader>a: :Tabularize /:<CR>
+"endif
 
 
 "-----------------------------------------------------------------------------

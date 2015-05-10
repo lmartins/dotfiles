@@ -14,11 +14,10 @@ set history=100           "Sets how many lines of history VIM has to remember
 set timeoutlen=500        "lowers leader+command timeout.
 set hidden                "Switch between buffers without saving
 set visualbell            "Use visual bell instead of beep add t_vb= to disable
-set foldmethod=marker     "Use {{{ and }}} to define folds
+set foldmethod=indent
 set gdefault              "Apply substitutions globally on a line by default
 set ttyfast               "Speed up terminal connection
 set clipboard=unnamed     "Give yank commands access to system clipboard
-
 
 
 " Centralize backups, swap files, and persistent undo
@@ -34,9 +33,6 @@ if exists("&undodir")
 endif
 set viminfo+=n$HOME/.vim/tmp/viminfo
 
-
-
-
 "More useful command-line completion
 set wildmode=list:longest
 set wildmenu
@@ -44,12 +40,9 @@ set wildmenu
 "In many terminal emulators the mouse works just fine, so have at it.
 set mouse=a
 
-
 " Automatically save changes before switching buffer with some
 " commands, like :cnfile.
 set autowrite
-
-
 
 
 
@@ -79,7 +72,7 @@ set sidescroll=1          "Minimum number of columns to scroll sideways
 
 
 "Shortcut to rapidly toggle `set list` (shows invisibles)
-nmap <leader>L :set list!<CR>
+"nmap <leader>L :set list!<CR>
 
 
 "Use the similar symbols as TextMate for tabstops and EOLs
@@ -90,21 +83,14 @@ set listchars=tab:›\ ,eol:¬,trail:⋅
 set diffopt=filler,vertical
 
 
-"Allows splits to be squashed to one line
-" set winminheight=0
-" set winminwidth=0
-
-
 "Toggle spellcheck
 nnoremap <silent> <leader>s :setlocal spell!<CR>
 
 "Save with sudo
 cnoremap sudow w !sudo tee % >/dev/null
 
-
 " Remove trailing white-space on saving
 autocmd BufWritePre * :%s/\s\+$//e
-
 
 
 
@@ -119,7 +105,6 @@ set shiftround
 set noexpandtab
 set smartindent            "Indent stuff
 set autoindent
-
 
 "Allow backspacing over everything in insert mode
 set backspace=indent,eol,start

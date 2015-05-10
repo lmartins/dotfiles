@@ -11,17 +11,17 @@
 "-----------------------------------------------------------------------------
 " INTERFACE
 "-----------------------------------------------------------------------------
-let mapleader = ","
+"let mapleader = ","
 
 " Unmap the arrow keys
 " no <down> <Nop>
 " no <left> <Nop>
 " no <right> <Nop>
 " no <up> <Nop>
-" ino <down> <Nop>
-" ino <left> <Nop>
-" ino <right> <Nop>
-" ino <up> <Nop>
+ino <down> <Nop>
+ino <left> <Nop>
+ino <right> <Nop>
+ino <up> <Nop>
 " vno <down> <Nop>
 " vno <left> <Nop>
 " vno <right> <Nop>
@@ -66,13 +66,13 @@ nmap <leader>et :tabe %%
 nnoremap <silent> <D-d> :cd %:p:h<cr
 
 "Jump back to last edited buffer
-nnoremap <D-b> <C-^>
-inoremap <D-b> <esc><C-^>
-"nnoremap <leader><leader> <c-^>
+"nnoremap <D-b> <C-^>
+"inoremap <D-b> <esc><C-^>
+nnoremap <leader><leader> <c-^>
 
 " Control P like sublime text
-map <D-t> :CtrlP<cr>
-map <D-T> :CtrlPBuffer<cr>
+map <C-p> :CtrlP<cr>
+map <C-P> :CtrlPBuffer<cr>
 
 " Keep search matches in the middle of the screen
 nmap G Gzz
@@ -91,6 +91,13 @@ nmap <silent> <leader>d <Plug>DashSearch
 
 " bind K to grep word under cursor
 nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
+
+
+"-----------------------------------------------------------------------------
+" FOLDING
+"-----------------------------------------------------------------------------
+" Toggle fold with spacebar if cursor placed in fold
+nnoremap <silent> <C-Space> @=(foldlevel('.')?'za':"\<Space>")<CR>
 
 
 "-----------------------------------------------------------------------------
@@ -126,6 +133,9 @@ nnoremap <C-l> <C-w>l
 " CODE NAVIGATION
 "-----------------------------------------------------------------------------
 
+" Command-Shift-F for Ack
+map <D-F> :Ag<space>
+
 "emacs style jump to end of line in insert mode
 "prevents conflict with autocomplete
 inoremap <expr> <c-e> pumvisible() ? "\<c-e>" : "\<c-o>A"
@@ -141,16 +151,12 @@ nnoremap <silent> <Leader>C :ChangeAroundSurrounding<CR>
 
 " Move to next/previous line with same indentation
 " ALT + K / J
-"nnoremap <M-k> :call search('^'. matchstr(getline('.'), '\(^\s*\)') .'\%<' . line('.') . 'l\S', 'be')<CR>
-"nnoremap <M-j> :call search('^'. matchstr(getline('.'), '\(^\s*\)') .'\%>' . line('.') . 'l\S', 'e')<CR>
-
+nnoremap <M-,> :call search('^'. matchstr(getline('.'), '\(^\s*\)') .'\%<' . line('.') . 'l\S', 'be')<CR>
+nnoremap <M-.> :call search('^'. matchstr(getline('.'), '\(^\s*\)') .'\%>' . line('.') . 'l\S', 'e')<CR>
 
 "-----------------------------------------------------------------------------
 " CODE MANIPULATION
 "-----------------------------------------------------------------------------
-
-" Command-Shift-F for Ack
-map <D-F> :Ag<space>
 
 " D-L use for copy-line command
 map <D-l> <esc>^vg_"+y
@@ -187,8 +193,8 @@ nnoremap <leader>l <esc>^vg_
 
 "Open line above (ctrl-shift-o much easier than ctrl-o shift-O)
 "SO USEFUL!!!
-inoremap <C-Enter> [<space>
-inoremap <C-S-Enter> ]<space>
+inoremap <C-Return> <C-o>o
+inoremap <C-S-Return> <C-o>O
 
 " Move visual block
 vnoremap J :m '>+1<CR>gv=gv
@@ -209,4 +215,6 @@ omap <Leader>L  <Plug>(easyoperator-line-select)
 xmap <Leader>L  <Plug>(easyoperator-line-select)
 nmap d<Leader>L <Plug>(easyoperator-line-delete)
 nmap p<Leader>L <Plug>(easyoperator-line-yank)
+
+
 
