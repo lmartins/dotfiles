@@ -50,7 +50,7 @@ Plugin 'kana/vim-textobj-indent'
 Plugin 'paranoida/vim-airlineish'
 Plugin 'zef/vim-cycle'
 Plugin 'michaeljsmith/vim-indent-object'
-
+Plugin 'rstacruz/sparkup'
 
 " Syntax
 Plugin 'othree/html5.vim'
