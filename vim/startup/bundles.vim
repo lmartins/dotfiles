@@ -51,6 +51,8 @@ Plugin 'paranoida/vim-airlineish'
 Plugin 'zef/vim-cycle'
 Plugin 'michaeljsmith/vim-indent-object'
 Plugin 'rstacruz/sparkup'
+Plugin 'moll/vim-bbye'
+
 
 " Syntax
 Plugin 'othree/html5.vim'
