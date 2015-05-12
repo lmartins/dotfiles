@@ -11,24 +11,24 @@
 "-----------------------------------------------------------------------------
 " INTERFACE
 "-----------------------------------------------------------------------------
-"let mapleader = ","
+let mapleader = ","
 
 " Unmap the arrow keys
 " no <down> <Nop>
 " no <left> <Nop>
 " no <right> <Nop>
 " no <up> <Nop>
-ino <down> <Nop>
-ino <left> <Nop>
-ino <right> <Nop>
-ino <up> <Nop>
+"ino <down> <Nop>
+"ino <left> <Nop>
+"ino <right> <Nop>
+"ino <up> <Nop>
 " vno <down> <Nop>
 " vno <left> <Nop>
 " vno <right> <Nop>
 " vno <up> <Nop>
 
 "Map shift-space to search and shift-space to backwards search
-nnoremap <space> /
+nnoremap <M-space> /
 nnoremap <S-space> ?
 
 "Toggle to different paste modes
@@ -97,7 +97,7 @@ nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
 " FOLDING
 "-----------------------------------------------------------------------------
 " Toggle fold with spacebar if cursor placed in fold
-nnoremap <silent> <C-Space> @=(foldlevel('.')?'za':"\<Space>")<CR>
+nnoremap <silent> <Space> @=(foldlevel('.')?'za':"\<Space>")<CR>
 
 
 "-----------------------------------------------------------------------------

@@ -35,7 +35,7 @@ let g:ctrlp_custom_ignore = '\v[\/](jspm_packages|node_modules|bower_components|
 
 nnoremap <Leader>o :CtrlP<CR>
 nnoremap <leader>. :CtrlPTag<cr>
-nnoremap <leader><space> :CtrlPBuffer<cr>
+nnoremap <leader><Space> :CtrlPBuffer<cr>
 
 
 "-----------------------------------------------------------------------------
