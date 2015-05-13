@@ -46,7 +46,7 @@ colorscheme Obsidian2
 "colorscheme base16-ateliersulphurpoolflat
 "colorscheme base16-flat
 "colorscheme base16-tomorrow
-"colorscheme base16-ocean
+colorscheme base16-ocean
 "colorscheme beekai
 "colorscheme busybee
 "colorscheme Hornet
