@@ -37,7 +37,7 @@ set wildignore+=*/.git/*,*/.idea/*,*/.DS_Store,bower_components/*,node_modules/*
 set background=dark
 "set background=light
 "colorscheme Mustang
-"colorscheme Obsidian2
+colorscheme Obsidian2
 "colorscheme Solarized
 "colorscheme Tomorrow
 "colorscheme Tomorrow-Night

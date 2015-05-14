@@ -37,7 +37,6 @@ Plugin 'xolox/vim-colorscheme-switcher'
 " Plugin 'Taverius/vim-colorscheme-manager'
 Plugin 'majutsushi/tagbar'
 Plugin 'rizzatti/dash.vim'
-"Plugin 'lfilho/cosco.vim'
 Plugin 'Raimondi/delimitMate'
 "Plugin 'tpope/vim-fugitive'
 Plugin 'Valloric/YouCompleteMe'
@@ -52,6 +51,8 @@ Plugin 'zef/vim-cycle'
 Plugin 'michaeljsmith/vim-indent-object'
 Plugin 'rstacruz/sparkup'
 Plugin 'moll/vim-bbye'
+"Plugin 'goldfeld/vim-seek'
+Plugin 'justinmk/vim-sneak'
 
 
 " Syntax

@@ -96,6 +96,9 @@ nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
 "-----------------------------------------------------------------------------
 " FOLDING
 "-----------------------------------------------------------------------------
+autocmd FileType scss setlocal foldmethod=marker
+autocmd FileType scss setlocal foldmarker={,}
+
 " Toggle fold with spacebar if cursor placed in fold
 nnoremap <silent> <Space> @=(foldlevel('.')?'za':"\<Space>")<CR>
 
