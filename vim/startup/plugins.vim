@@ -169,6 +169,20 @@ set statusline=\ %f\ %m\ %r%=%{SyntasticStatuslineFlag()}\ \ \ %y%12.12(%l\,\ %c
 
 
 " -----------------------------------------------------------------------------
+" SNEAK
+" -----------------------------------------------------------------------------
+nmap f <Plug>Sneak_s
+nmap F <Plug>Sneak_S
+xmap f <Plug>Sneak_s
+xmap F <Plug>Sneak_S
+omap f <Plug>Sneak_s
+omap F <Plug>Sneak_S
+nmap <enter> <Plug>SneakNext
+xmap <enter> <Plug>SneakNext
+nmap <bs>    <Plug>SneakPrevious
+xmap <bs>    <Plug>SneakPrevious
+
+" -----------------------------------------------------------------------------
 " YOU COMPLETE ME
 " -----------------------------------------------------------------------------
 " let g:ycm_key_list_select_completion = ['<TAB>', '<Down>']
