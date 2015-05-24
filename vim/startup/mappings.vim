@@ -104,8 +104,8 @@ nnoremap <silent> <Space> @=(foldlevel('.')?'za':"\<Space>")<CR>
 
 "Skip open folds when jumping between folds
 "http://stackoverflow.com/questions/9403098/is-it-possible-to-jump-to-closed-folds-in-vim
-nnoremap <silent> <leader>zj :call NextClosedFold('j')<cr>
-nnoremap <silent> <leader>zk :call NextClosedFold('k')<cr>
+nnoremap <silent> zj :call NextClosedFold('j')<cr>
+nnoremap <silent> zk :call NextClosedFold('k')<cr>
 
 "-----------------------------------------------------------------------------
 " INDENTATION
