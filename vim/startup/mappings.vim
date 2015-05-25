@@ -28,8 +28,8 @@ let mapleader = ","
 " vno <up> <Nop>
 
 "Map shift-space to search and shift-space to backwards search
-nnoremap <M-space> /
-nnoremap <S-space> ?
+nnoremap <S-space> /
+nnoremap <C-space> ?
 
 "Toggle to different paste modes
 nnoremap \t :set expandtab tabstop=4 shiftwidth=4 softtabstop=4<CR>

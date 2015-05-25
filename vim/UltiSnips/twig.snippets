@@ -2,6 +2,10 @@ snippet dump "Debug Twig Vars" b
 \{\{ dump( $1 ) \}\}$2
 endsnippet
 
+snippet __ "Translation String" b
+\{\{ __( $1, ${VISUAL:'wip'} ) \}\}$3
+endsnippet
+
 snippet % "Twig Tag Wrapper" b
 \{% $1 %\}$2
 endsnippet
