@@ -24,7 +24,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
 Plugin 'sjl/gundo.vim'
 Plugin 'terryma/vim-multiple-cursors'
-Plugin 'scrooloose/nerdcommenter'
+"Plugin 'scrooloose/nerdcommenter'
 Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-unimpaired'
@@ -53,6 +53,8 @@ Plugin 'moll/vim-bbye'
 "Plugin 'goldfeld/vim-seek'
 Plugin 'justinmk/vim-sneak'
 Plugin 'MattesGroeger/vim-bookmarks'
+Plugin 'tomtom/tcomment_vim'
+
 
 " Syntax
 Plugin 'othree/html5.vim'
