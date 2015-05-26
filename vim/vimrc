@@ -45,7 +45,7 @@ set background=dark
 "colorscheme Atom
 "colorscheme corporation
 "colorscheme base16-ateliersulphurpoolflat
-colorscheme base16-flat
+" colorscheme base16-flat
 "colorscheme base16-tomorrow
 "colorscheme base16-ocean
 "colorscheme beekai
@@ -56,6 +56,7 @@ colorscheme base16-flat
 "colorscheme PaperColor
 "color molokai
 "color dracula
+color codeschool
 
 
 

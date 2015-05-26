@@ -77,6 +77,7 @@ Plugin 'chriskempson/base16-vim'
 Plugin 'atelierbram/vim-colors_atelier-schemes'
 "Plugin 'stulzer/heroku-colorscheme'
 Plugin 'NLKNguyen/papercolor-theme'
+Plugin '29decibel/codeschool-vim-theme'
 
 " Plugins that don't play well with the terminal
 if has("gui_running")
