@@ -114,6 +114,14 @@ let delimitMate_expand_cr = 1
 let delimitMate_expand_space = 1
 
 
+"------------------------------------------------------------------------------
+" FOLDCYCLE
+"------------------------------------------------------------------------------
+let g:fold_cycle_default_mapping = 0 "disable default mappings
+nmap <Space> <Plug>(fold-cycle-open)
+nmap <M-Space> <Plug>(fold-cycle-close)
+
+
 " -----------------------------------------------------------------------------
 " GTFO
 " -----------------------------------------------------------------------------
