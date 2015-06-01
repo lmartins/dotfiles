@@ -38,7 +38,7 @@ Plugin 'majutsushi/tagbar'
 Plugin 'rizzatti/dash.vim'
 Plugin 'Raimondi/delimitMate'
 "Plugin 'tpope/vim-fugitive'
-Plugin 'Valloric/YouCompleteMe'
+" Plugin 'Valloric/YouCompleteMe'
 Plugin 'justinmk/vim-gtfo'
 Plugin 'sickill/vim-pasta'
 Plugin 'zefei/vim-colortuner'
@@ -55,6 +55,8 @@ Plugin 'justinmk/vim-sneak'
 Plugin 'MattesGroeger/vim-bookmarks'
 Plugin 'tomtom/tcomment_vim'
 Plugin 'arecarn/fold-cycle.vim'
+Plugin 'ervandew/supertab'
+
 
 " Syntax
 Plugin 'othree/html5.vim'
