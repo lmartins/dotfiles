@@ -8,7 +8,7 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts=1
 " let g:airline_theme='base16'
 " let g:airline_theme='molokai'
-let g:airline_theme='zenburn'
+" let g:airline_theme='zenburn'
 " let g:airline_theme = 'airlineish'
 
 
@@ -60,10 +60,61 @@ map <Leader> <Plug>(easymotion-prefix)
 let g:user_emmet_mode='a'    "enable all function in all modes.
 " Change emmet expansion key to command + e
 " imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")  This breaks Supertab, find a way to do  it
-let g:user_emmet_expandabbr_key = '<D-e>'
-let g:user_emmet_next_key = '<C-f>'
+" let g:user_emmet_expandabbr_key = '<D-e>'
+" let g:user_emmet_next_key = '<C-f>'
 " let g:user_emmet_prev_key = '<C-F>'
 
+" tab through emmet fields
+function! s:move_to_next_emmet_area(direction)
+  " go to next item in a popup menu
+  if pumvisible()
+    if (a:direction == 0)
+      return "\<C-p>"
+    else
+      return "\<C-n>"
+    endif
+  endif
+
+  " try to determine if we're within quotes or angle brackets.
+  " if so, assume we're in an emmet fill area.
+  let line = getline('.')
+  if col('.') < len(line)
+    let line = matchstr(line, '[">][^<"]*\%'.col('.').'c[^>"]*[<"]')
+
+    if len(line) >= 2
+      if (a:direction == 0)
+        return "\<Plug>(emmet-move-prev)"
+      else
+        return "\<Plug>(emmet-move-next)"
+      endif
+    endif
+  endif
+
+  " return a regular tab character
+  return "\<tab>"
+endfunction
+
+" expand an emmet sequence like ul>li*5
+function! s:expand_emmet_sequence()
+  " first try to expand any neosnippets
+  if neosnippet#expandable_or_jumpable()
+    return "\<Plug>(neosnippet_expand_or_jump)"
+  endif
+
+  " expand anything emmet thinks is expandable
+  if emmet#isExpandable()
+    return "\<Plug>(emmet-expand-abbr)"
+  endif
+endfun
+
+" using <C-s> requires a line in .bashrc/.zshrc/etc. to prevent
+" linux terminal driver from freezing the terminal on ctrl-s:
+"     stty -ixon -ixoff
+" see: http://unix.stackexchange.com/questions/12107/how-to-unfreeze-after-accidentally-pressing-ctrl-s-in-a-terminal#12108
+" also: http://stackoverflow.com/questions/6429515/stty-hupcl-ixon-ixoff
+autocmd FileType html,hbs,twig,handlebars,css,scss imap <buffer><expr><C-s> <sid>expand_emmet_sequence()
+autocmd FileType html,hbs,twig,handlebars,css,scss imap <buffer><expr><S-TAB> <sid>move_to_next_emmet_area(0)
+autocmd FileType html,hbs,twig,handlebars,css,scss imap <buffer><expr><TAB> <sid>move_to_next_emmet_area(1)
 
 " -----------------------------------------------------------------------------
 " POWERLINE
@@ -181,35 +232,31 @@ set statusline=\ %f\ %m\ %r%=%{SyntasticStatuslineFlag()}\ \ \ %y%12.12(%l\,\ %c
 " -----------------------------------------------------------------------------
 " SNEAK
 " -----------------------------------------------------------------------------
-nmap f <Plug>Sneak_s
-nmap F <Plug>Sneak_S
-xmap f <Plug>Sneak_s
-xmap F <Plug>Sneak_S
-omap f <Plug>Sneak_s
-omap F <Plug>Sneak_S
-nmap <enter> <Plug>SneakNext
-xmap <enter> <Plug>SneakNext
-nmap <bs>    <Plug>SneakPrevious
-xmap <bs>    <Plug>SneakPrevious
- "replace 'f' with 1-char Sneak
-nmap f <Plug>Sneak_f
-nmap F <Plug>Sneak_F
-xmap f <Plug>Sneak_f
-xmap F <Plug>Sneak_F
-omap f <Plug>Sneak_f
-omap F <Plug>Sneak_F
-"replace 't' with 1-char Sneak
-nmap t <Plug>Sneak_t
-nmap T <Plug>Sneak_T
-xmap t <Plug>Sneak_t
-xmap T <Plug>Sneak_T
-omap t <Plug>Sneak_t
-omap T <Plug>Sneak_T
+" nmap f <Plug>Sneak_s
+" nmap F <Plug>Sneak_S
+" xmap f <Plug>Sneak_s
+" xmap F <Plug>Sneak_S
+" omap f <Plug>Sneak_s
+" omap F <Plug>Sneak_S
+" nmap <enter> <Plug>SneakNext
+" xmap <enter> <Plug>SneakNext
+" nmap <bs>    <Plug>SneakPrevious
+" xmap <bs>    <Plug>SneakPrevious
+"  "replace 'f' with 1-char Sneak
+" nmap f <Plug>Sneak_f
+" nmap F <Plug>Sneak_F
+" xmap f <Plug>Sneak_f
+" xmap F <Plug>Sneak_F
+" omap f <Plug>Sneak_f
+" omap F <Plug>Sneak_F
+" "replace 't' with 1-char Sneak
+" nmap t <Plug>Sneak_t
+" nmap T <Plug>Sneak_T
+" xmap t <Plug>Sneak_t
+" xmap T <Plug>Sneak_T
+" omap t <Plug>Sneak_t
+" omap T <Plug>Sneak_T
 
-" -----------------------------------------------------------------------------
-" YOU COMPLETE ME
-" -----------------------------------------------------------------------------
-" let g:ycm_key_list_select_completion = ['<TAB>', '<Down>']
 
 
 " -----------------------------------------------------------------------------
