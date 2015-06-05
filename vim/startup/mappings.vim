@@ -68,7 +68,10 @@ nnoremap <silent> <D-d> :cd %:p:h<cr
 "Jump back to last edited buffer
 "nnoremap <D-b> <C-^>
 "inoremap <D-b> <esc><C-^>
-nnoremap <leader><leader> <c-^>
+" nnoremap <leader><leader> <c-^>
+map <C-Tab> :bnext<cr>
+map <C-S-Tab> :bprevious<cr>
+
 
 " Control P like sublime text
 map <C-p> :CtrlP<cr>
@@ -92,6 +95,14 @@ nmap <silent> <leader>d <Plug>DashSearch
 " bind K to grep word under cursor
 nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
 
+
+" Ctrl-Space for completions. Heck Yeah!
+inoremap <expr> <C-Space> pumvisible() \|\| &omnifunc == '' ?
+            \ "\<lt>C-n>" :
+            \ "\<lt>C-x>\<lt>C-o><c-r>=pumvisible() ?" .
+            \ "\"\\<lt>c-n>\\<lt>c-p>\\<lt>c-n>\" :" .
+            \ "\" \\<lt>bs>\\<lt>C-n>\"\<CR>"
+imap <C-@> <C-Space>
 
 "-----------------------------------------------------------------------------
 " FOLDING
