@@ -19,8 +19,8 @@
      ;; --------------------------------------------------------
      auto-completion
      better-defaults
-     ;; (git :variables
-     ;;      git-gutter-use-fringe t)
+     (git :variables
+          git-gutter-use-fringe t)
      ;; markdown
      org
      vagrant
@@ -35,7 +35,7 @@
      evil-snipe
      javascript
      perspectives
-     ; my-settings-layer
+     base16-theme
      )
    ;; A list of packages and/or extensions that will not be install and loaded.
    dotspacemacs-excluded-packages '(
@@ -73,6 +73,7 @@ before layers configuration."
    ;; Press <SPC> T n to cycle to the next theme in the list (works great
    ;; with 2 themes variants, one dark and one light)
    dotspacemacs-themes '(
+                         material
                          solarized-dark
                          solarized-light
                          apropospriate-dark
@@ -88,7 +89,7 @@ before layers configuration."
                                :size 13
                                :weight normal
                                :width normal
-                               :powerline-scale 1.1)
+                               :powerline-scale 1)
    ;; The leader key
    dotspacemacs-leader-key "SPC"
    ;; The leader key accessible in `emacs state' and `insert state'
@@ -147,16 +148,23 @@ before layers configuration."
    dotspacemacs-default-package-repository nil
    )
   ;; User initialization goes here
-  dotspacemacs-additional-packages '(base16-theme)
-  dotspacemacs-additional-packages '(apropospriate-theme)
-  dotspacemacs-additional-packages '(sublime-themes)
+
+  (setq-default git-enable-github-support t)
+  (setq-default git-magit-status-fullscreen t)
+  
   )
 
 (defun dotspacemacs/config ()
   "Configuration function.
   This function is called at the very end of Spacemacs initialization after layers configuration."
 
-  (setq-default line-spacing 6)
+  (setq dotspacemacs-additional-packages
+        '(
+          base16-theme
+          )
+        )
+
+  (setq-default line-spacing 4)
   (global-linum-mode)
   ;; Remember open projects and window sizes
   (desktop-save-mode 1)
@@ -164,7 +172,9 @@ before layers configuration."
   (add-to-list 'auto-mode-alist '("\\.twig\\'" . web-mode))
 
   (global-set-key (kbd "s-p") 'helm-projectile-find-file) ; Find File in Project
-)
+  (global-set-key (kbd "<f12>") 'helm-css-scss) ; Find File in Project
+
+  )
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
