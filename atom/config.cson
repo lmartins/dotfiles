@@ -1,0 +1,111 @@
+"*":
+  editor:
+    invisibles:
+      {}
+    scrollPastEnd: true
+    tabLength: 4
+    fontSize: 12
+    lineHeight: 2
+    softWrap: true
+    fontFamily: "Fira Mono"
+  core:
+    themes: [
+      "one-dark-ui"
+      "chester-atom-syntax"
+    ]
+    disabledPackages: [
+      "symbols-view"
+      "linter-jscs"
+      "autocomplete"
+      "autohide-tree-view"
+      "powerline"
+      "language-objective-c"
+      "archive-view"
+      "language-clojure"
+      "language-c"
+      "language-csharp"
+      "language-gfm"
+      "language-go"
+      "language-java"
+      "language-perl"
+      "language-python"
+      "language-ruby"
+      "language-ruby-on-rails"
+      "welcome"
+      "git-difftool"
+      "layout-manager"
+    ]
+    projectHome: "/Users/luismartins/Sites"
+    ignoredNames: [
+      ".DS_Store"
+      "bower_components"
+      "node_modules"
+      "build"
+      "jspm_packages"
+    ]
+  "exception-reporting":
+    userId: "bfa3285b-6dd3-edc4-e06e-c4ad0e14bab4"
+  welcome:
+    showOnStartup: false
+  "sync-settings":
+    personalAccessToken: "ba80e8922f593c1f307c51d74ca01074639ddf25"
+    gistId: "9f8c9614aa0486a9e69d"
+  "atom-ctags":
+    cmdArgs: "--exclude=node_modules --exclude=components --exclude=bower_components --exclude=jspm_packages"
+  linter:
+    lintOnChangeInterval: 2500
+    statusBar: "Show error if the cursor is in range"
+    showInfoMessages: true
+    subtleLinterErrors: [
+      "php"
+    ]
+    ignoredLinterErrors: [
+      "jshint"
+    ]
+  "tree-view":
+    hideIgnoredNames: true
+    hideVcsIgnoredFiles: true
+  "autocomplete-plus":
+    confirmCompletion: "enter"
+    strictMatching: true
+    minimumWordLength: 2
+    autoActivationDelay: 160
+  "linter-jscs":
+    {}
+  "linter-jshint":
+    {}
+  "autohide-tree-view":
+    pushEditor: true
+  "atom-beautify":
+    _analyticsUserId: "b3295844-7c4c-4e86-a236-f1875799b174"
+  "atom-terminal-panel":
+    {}
+  "vim-surround":
+    {}
+  "base16-syntax":
+    scheme: "Ocean"
+  "isotope-light-ui":
+    fontWeight: "Regular"
+    fontFamily: "Fira Sans"
+    customBackgroundColor: "false"
+  "isotope-ui":
+    spaciousMode: true
+    backgroundColor: "false"
+    fontWeight: "Regular"
+    fontFamily: "Fira Sans"
+  "symbols-tree-view":
+    {}
+  "recent-files-fuzzy-finder":
+    {}
+  "atom-alignment":
+    {}
+  "vim-mode":
+    useClipboardAsDefaultRegister: true
+  emmet:
+    {}
+  minimap:
+    plugins:
+      bookmarks: true
+    displayCodeHighlights: false
+  "spell-check":
+    {}

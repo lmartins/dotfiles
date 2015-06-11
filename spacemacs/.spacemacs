@@ -85,9 +85,9 @@ before layers configuration."
    dotspacemacs-colorize-cursor-according-to-state t
    ;; Default font. `powerline-scale' allows to quickly tweak the mode-line
    ;; size to make separators look not too crappy.
-   dotspacemacs-default-font '("Bitstream Vera Sans Mono"
-                               :size 13
-                               :weight normal
+   dotspacemacs-default-font '("Fira Mono"
+                               :size 12
+                               :weight regular
                                :width normal
                                :powerline-scale 1)
    ;; The leader key
@@ -167,7 +167,7 @@ before layers configuration."
   (setq-default line-spacing 4)
   (global-linum-mode)
   ;; Remember open projects and window sizes
-  (desktop-save-mode 1)
+  ;; (desktop-save-mode 1)
 
   (add-to-list 'auto-mode-alist '("\\.twig\\'" . web-mode))
 
