@@ -42,3 +42,13 @@
 
 '.platform-darwin':
     'shift-cmd-R': 'atom-ctags:toggle-project-symbols'
+
+'.platform-darwin atom-text-editor:not([mini])':
+    'shift-cmd-R': 'unset!'
+
+'atom-text-editor:not([mini])':
+    'ctrl-shift-R': 'unset!'
+    
+'.fuzzy-finder atom-text-editor[mini]':
+  'ctrl-v': 'pane:split-right'
+  'ctrl-s': 'pane:split-down'

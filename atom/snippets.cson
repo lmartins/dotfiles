@@ -83,3 +83,12 @@
                 $2
             }$3
             """
+
+    'Pseudo Element':
+        'prefix': 'pseudo'
+        'body': """
+            &:after{
+                display: block;
+                content: "";
+            }
+            """

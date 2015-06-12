@@ -1,7 +1,6 @@
 "*":
   editor:
-    invisibles:
-      {}
+    invisibles: {}
     scrollPastEnd: true
     tabLength: 4
     fontSize: 12
@@ -11,7 +10,7 @@
   core:
     themes: [
       "one-dark-ui"
-      "chester-atom-syntax"
+      "oceanic-next"
     ]
     disabledPackages: [
       "symbols-view"
@@ -34,6 +33,8 @@
       "welcome"
       "git-difftool"
       "layout-manager"
+      "atom-ctags"
+      "takana-atom"
     ]
     projectHome: "/Users/luismartins/Sites"
     ignoredNames: [
@@ -70,18 +71,14 @@
     strictMatching: true
     minimumWordLength: 2
     autoActivationDelay: 160
-  "linter-jscs":
-    {}
-  "linter-jshint":
-    {}
+  "linter-jscs": {}
+  "linter-jshint": {}
   "autohide-tree-view":
     pushEditor: true
   "atom-beautify":
     _analyticsUserId: "b3295844-7c4c-4e86-a236-f1875799b174"
-  "atom-terminal-panel":
-    {}
-  "vim-surround":
-    {}
+  "atom-terminal-panel": {}
+  "vim-surround": {}
   "base16-syntax":
     scheme: "Ocean"
   "isotope-light-ui":
@@ -93,19 +90,17 @@
     backgroundColor: "false"
     fontWeight: "Regular"
     fontFamily: "Fira Sans"
-  "symbols-tree-view":
-    {}
-  "recent-files-fuzzy-finder":
-    {}
-  "atom-alignment":
-    {}
+  "symbols-tree-view": {}
+  "recent-files-fuzzy-finder": {}
+  "atom-alignment": {}
   "vim-mode":
     useClipboardAsDefaultRegister: true
-  emmet:
-    {}
+  emmet: {}
   minimap:
     plugins:
       bookmarks: true
-    displayCodeHighlights: false
-  "spell-check":
-    {}
+    absoluteMode: true
+  "spell-check": {}
+  goto:
+    moreIgnoredNames: "build, jspm_packages, node_modules, bower_components"
+  "takana-atom": {}
