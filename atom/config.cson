@@ -8,10 +8,6 @@
     softWrap: true
     fontFamily: "Fira Mono"
   core:
-    themes: [
-      "one-dark-ui"
-      "oceanic-next"
-    ]
     disabledPackages: [
       "symbols-view"
       "linter-jscs"
@@ -43,6 +39,10 @@
       "node_modules"
       "build"
       "jspm_packages"
+    ]
+    themes: [
+      "one-dark-ui"
+      "oceanic-next"
     ]
   "exception-reporting":
     userId: "bfa3285b-6dd3-edc4-e06e-c4ad0e14bab4"
@@ -104,3 +104,6 @@
   goto:
     moreIgnoredNames: "build, jspm_packages, node_modules, bower_components"
   "takana-atom": {}
+  toggle: {}
+  "one-dark-ui":
+    layoutMode: "Spacious"

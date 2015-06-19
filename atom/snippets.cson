@@ -60,6 +60,22 @@
         'prefix': 'links'
         'body': '@include link-colors(${1:gc(link, normal)}, ${2:gc(link,active)})'
 
+    'Lighten Color':
+        'prefix': 'cll'
+        'body': 'lighten(${1:white}, ${2:10}%);$3'
+
+    'Darken Color':
+        'prefix': 'cld'
+        'body': 'darken(${1:white}, ${2:10}%);$3'
+
+    'Desaturate Color':
+        'prefix': 'cls'
+        'body': 'desaturate(${1:white}, ${2:10}%);$3'
+
+    'Saturate Color':
+        'prefix': 'cls'
+        'body': 'saturate(${1:white}, ${2:10}%);$3'
+
     'MQ: Desktop':
         'prefix': 'mqd'
         'body': """
