@@ -5,7 +5,8 @@ ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="agnoster-lm"
+# ZSH_THEME="agnoster-lm"
+ZSH_THEME="avit"
 
 # Não mostra o nome da máquina, apenas se ligado por SSH
 [[ -n "$SSH_CLIENT" ]] || export DEFAULT_USER="luismartins"
