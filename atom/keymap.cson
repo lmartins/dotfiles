@@ -37,16 +37,18 @@
   '-': 'toggle:there'
 
 'atom-text-editor.vim-mode.command-mode':
-  'space': 'editor:toggle-current-row-folding'
-  'g f':      'open-this:here'
-  'ctrl-w f': 'open-this:split-down'
-  'ctrl-w F': 'open-this:split-right'
-  'ctrl-k': 'editor:move-line-up'
-  'ctrl-j': 'editor:move-line-down'
+    'space'   : 'editor:toggle-current-row-folding'
+    'g f'     : 'open-this:here'
+    'ctrl-w f': 'open-this:split-down'
+    'ctrl-w F': 'open-this:split-right'
+    'ctrl-k'  : 'editor:move-line-up'
+    'ctrl-j'  : 'editor:move-line-down'
 
 'atom-text-editor.vim-mode.visual-mode':
-    'v': 'expand-region:expand'
-    'V': 'expand-region:shrink'
+    'v'     : 'expand-region:expand'
+    'V'     : 'expand-region:shrink'
+    'ctrl-k': 'editor:move-line-up'
+    'ctrl-j': 'editor:move-line-down'
 
 '.platform-darwin .pane .editor:not(.mini)':
     'cmd-/': 'editor:toggle-line-comments'

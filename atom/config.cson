@@ -107,3 +107,5 @@
   toggle: {}
   "one-dark-ui":
     layoutMode: "Spacious"
+  pigments:
+    markerType: "dot"
