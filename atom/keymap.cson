@@ -34,11 +34,11 @@
     'ctrl-shift-g' : 'git-control:toggle'
 
 'atom-text-editor.vim-mode.command-mode':
-  '-': 'toggle:there'
-
-'atom-text-editor.vim-mode.command-mode':
-    'space'   : 'editor:toggle-current-row-folding'
-    'g f'     : 'open-this:here'
+    '-': 'toggle:there'
+    ']': 'cursor-history:next'
+    '[': 'cursor-history:prev'
+    'space': 'editor:toggle-current-row-folding'
+    'g f':      'open-this:here'
     'ctrl-w f': 'open-this:split-down'
     'ctrl-w F': 'open-this:split-right'
     'ctrl-k'  : 'editor:move-line-up'

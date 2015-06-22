@@ -42,7 +42,7 @@
     ]
     themes: [
       "one-dark-ui"
-      "oceanic-next"
+      "chester-atom-syntax"
     ]
   "exception-reporting":
     userId: "bfa3285b-6dd3-edc4-e06e-c4ad0e14bab4"
