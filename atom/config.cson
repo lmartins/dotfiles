@@ -29,8 +29,8 @@
       "welcome"
       "git-difftool"
       "layout-manager"
-      "atom-ctags"
       "takana-atom"
+      "atom-ctags"
     ]
     projectHome: "/Users/luismartins/Sites"
     ignoredNames: [
@@ -41,8 +41,8 @@
       "jspm_packages"
     ]
     themes: [
-      "one-dark-ui"
-      "chester-atom-syntax"
+      "atom-material-ui"
+      "atom-material-syntax"
     ]
   "exception-reporting":
     userId: "bfa3285b-6dd3-edc4-e06e-c4ad0e14bab4"
@@ -67,7 +67,7 @@
     hideIgnoredNames: true
     hideVcsIgnoredFiles: true
   "autocomplete-plus":
-    confirmCompletion: "enter"
+    confirmCompletion: "tab"
     strictMatching: true
     minimumWordLength: 2
     autoActivationDelay: 160
@@ -105,7 +105,9 @@
     moreIgnoredNames: "build, jspm_packages, node_modules, bower_components"
   "takana-atom": {}
   toggle: {}
-  "one-dark-ui":
-    layoutMode: "Spacious"
+  "one-dark-ui": {}
   pigments:
     markerType: "dot"
+  "atom-material-ui":
+    slimScrollbar: true
+    depth: true
