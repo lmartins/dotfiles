@@ -31,6 +31,7 @@
       "layout-manager"
       "takana-atom"
       "atom-ctags"
+      "file-type-icons"
     ]
     projectHome: "/Users/luismartins/Sites"
     ignoredNames: [
@@ -39,10 +40,6 @@
       "node_modules"
       "build"
       "jspm_packages"
-    ]
-    themes: [
-      "atom-material-ui"
-      "atom-material-syntax"
     ]
   "exception-reporting":
     userId: "bfa3285b-6dd3-edc4-e06e-c4ad0e14bab4"
@@ -67,10 +64,11 @@
     hideIgnoredNames: true
     hideVcsIgnoredFiles: true
   "autocomplete-plus":
-    confirmCompletion: "tab"
+    confirmCompletion: "enter"
     strictMatching: true
     minimumWordLength: 2
     autoActivationDelay: 160
+    backspaceTriggersAutocomplete: true
   "linter-jscs": {}
   "linter-jshint": {}
   "autohide-tree-view":
@@ -111,3 +109,5 @@
   "atom-material-ui":
     slimScrollbar: true
     depth: true
+  "file-icons":
+    onChanges: true
