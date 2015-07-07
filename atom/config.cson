@@ -32,6 +32,8 @@
       "takana-atom"
       "atom-ctags"
       "file-type-icons"
+      "wrap-guide"
+      "php-debug"
     ]
     projectHome: "/Users/luismartins/Sites"
     ignoredNames: [
@@ -40,6 +42,10 @@
       "node_modules"
       "build"
       "jspm_packages"
+    ]
+    themes: [
+      "one-dark-ui"
+      "atom-snappy"
     ]
   "exception-reporting":
     userId: "bfa3285b-6dd3-edc4-e06e-c4ad0e14bab4"
@@ -62,7 +68,6 @@
     ]
   "tree-view":
     hideIgnoredNames: true
-    hideVcsIgnoredFiles: true
   "autocomplete-plus":
     confirmCompletion: "enter"
     strictMatching: true
@@ -97,6 +102,7 @@
   minimap:
     plugins:
       bookmarks: true
+      codeglance: true
     absoluteMode: true
   "spell-check": {}
   goto:
@@ -107,7 +113,11 @@
   pigments:
     markerType: "dot"
   "atom-material-ui":
-    slimScrollbar: true
     depth: true
+    panelContrast: true
+    altCmdPalette: true
   "file-icons":
     onChanges: true
+  "minimap-codeglance":
+    numberOfLines: 14
+    showGutter: false

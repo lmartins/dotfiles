@@ -81,6 +81,7 @@ alias sshconfig='sublime ~/.ssh/config'
 alias week='date +%V'
 alias component='nocorrect component'
 
-alias vim="nvim"
+alias docker-wp='docker-compose run webipackdev wp --allow-root'
+
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting

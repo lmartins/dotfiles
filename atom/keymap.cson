@@ -24,6 +24,7 @@
 # If you are unfamiliar with CSON, you can read more about it here:
 # https://github.com/bevry/cson#what-is-cson
 
+
 'body':
     'cmd-shift-w': 'pane:close-other-items'
 
@@ -32,6 +33,8 @@
 
 'atom-workspace':
     'ctrl-shift-g' : 'git-control:toggle'
+    'ctrl-i' : 'cursor-history:next'
+    'ctrl-o' : 'cursor-history:prev'
 
 'atom-text-editor.vim-mode.command-mode':
     '-': 'toggle:there'
@@ -45,6 +48,9 @@
     'ctrl-j'  : 'editor:move-line-down'
     ', b': 'fuzzy-finder:toggle-buffer-finder'
     ', f': 'fuzzy-finder:toggle-file-finder'
+    'shift-enter': 'smalls:start'
+    'ctrl-i' : 'cursor-history:next'
+    'ctrl-o' : 'cursor-history:prev'
 
 'atom-text-editor.vim-mode.visual-mode':
     'v'     : 'expand-region:expand'
