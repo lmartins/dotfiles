@@ -51,6 +51,13 @@
     'shift-enter': 'smalls:start'
     'ctrl-i' : 'cursor-history:next'
     'ctrl-o' : 'cursor-history:prev'
+    'cmd-x':     'paner:swap-item'
+    'cmd-X':     'paner:send-item'
+    'cmd-enter': 'paner:maximize'
+    'cmd-K':     'paner:very-top'
+    'cmd-J':     'paner:very-bottom'
+    'cmd-H':     'paner:very-left'
+    'cmd-L':     'paner:very-right'
 
 'atom-text-editor.vim-mode.visual-mode':
     'v'     : 'expand-region:expand'

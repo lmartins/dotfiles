@@ -45,7 +45,7 @@
     ]
     themes: [
       "one-dark-ui"
-      "atom-snappy"
+      "chester-atom-syntax"
     ]
   "exception-reporting":
     userId: "bfa3285b-6dd3-edc4-e06e-c4ad0e14bab4"
@@ -103,6 +103,7 @@
     plugins:
       bookmarks: true
       codeglance: true
+      "minimap-hide": true
     absoluteMode: true
   "spell-check": {}
   goto:
