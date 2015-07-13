@@ -65,6 +65,7 @@
     'ctrl-k': 'editor:move-line-up'
     'ctrl-j': 'editor:move-line-down'
 
+
 '.platform-darwin .pane .editor:not(.mini)':
     'cmd-/': 'editor:toggle-line-comments'
 
@@ -80,3 +81,22 @@
 '.fuzzy-finder atom-text-editor[mini]':
   'ctrl-v': 'pane:split-right'
   'ctrl-s': 'pane:split-down'
+
+
+# LAZY MOTION
+'atom-text-editor':
+    'ctrl-s':     'lazy-motion:forward'
+    'ctrl-cmd-r': 'lazy-motion:backward'
+
+'atom-text-editor.lazy-motion':
+    ']': 'lazy-motion:forward'
+    '[': 'lazy-motion:backward'
+
+'atom-text-editor.vim-mode.command-mode':
+    's': 'lazy-motion:search-forward'
+
+'.platform-darwin atom-text-editor.lazy-motion[mini]':
+    ']':      'lazy-motion:forward'
+    '[':      'lazy-motion:backward'
+    ';':      'core:confirm'
+    'ctrl-g': 'core:cancel'

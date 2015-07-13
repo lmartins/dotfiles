@@ -103,7 +103,7 @@
     'Pseudo Element':
         'prefix': 'pseudo'
         'body': """
-            &:after{
+            &::after{
                 display: block;
                 content: "";
             }

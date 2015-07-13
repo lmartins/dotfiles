@@ -34,6 +34,7 @@
       "file-type-icons"
       "wrap-guide"
       "php-debug"
+      "smalls"
     ]
     projectHome: "/Users/luismartins/Sites"
     ignoredNames: [
@@ -45,7 +46,7 @@
     ]
     themes: [
       "one-dark-ui"
-      "chester-atom-syntax"
+      "br4ckets-light"
     ]
   "exception-reporting":
     userId: "bfa3285b-6dd3-edc4-e06e-c4ad0e14bab4"
@@ -122,3 +123,6 @@
   "minimap-codeglance":
     numberOfLines: 14
     showGutter: false
+  "lazy-motion":
+    autoLand: true
+    showHoverIndicator: true
