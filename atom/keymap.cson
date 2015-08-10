@@ -24,9 +24,9 @@
 # If you are unfamiliar with CSON, you can read more about it here:
 # https://github.com/bevry/cson#what-is-cson
 
-
 'body':
     'cmd-shift-w': 'pane:close-other-items'
+    'shift-cmd-ctrl-W': 'window:close'
 
 'atom-text-editor':
     'cmd-shift-space' : 'expand-selection:expand'
@@ -48,7 +48,6 @@
     'ctrl-j'  : 'editor:move-line-down'
     ', b': 'fuzzy-finder:toggle-buffer-finder'
     ', f': 'fuzzy-finder:toggle-file-finder'
-    'shift-enter': 'smalls:start'
     'ctrl-i' : 'cursor-history:next'
     'ctrl-o' : 'cursor-history:prev'
     'cmd-x':     'paner:swap-item'
@@ -82,21 +81,16 @@
   'ctrl-v': 'pane:split-right'
   'ctrl-s': 'pane:split-down'
 
-
-# LAZY MOTION
-'atom-text-editor':
-    'ctrl-s':     'lazy-motion:forward'
-    'ctrl-cmd-r': 'lazy-motion:backward'
+# Lazy Motion
+'atom-text-editor.vim-mode.command-mode, atom-text-editor.vim-mode.visual-mode':
+  's':           'lazy-motion:forward'
+  'ctrl-p':      'lazy-motion:forward-again'
 
 'atom-text-editor.lazy-motion':
-    ']': 'lazy-motion:forward'
-    '[': 'lazy-motion:backward'
-
-'atom-text-editor.vim-mode.command-mode':
-    's': 'lazy-motion:search-forward'
-
-'.platform-darwin atom-text-editor.lazy-motion[mini]':
-    ']':      'lazy-motion:forward'
-    '[':      'lazy-motion:backward'
-    ';':      'core:confirm'
-    'ctrl-g': 'core:cancel'
+  'ctrl-u': 'editor:delete-to-beginning-of-line'
+  ']':      'lazy-motion:forward'
+  '[':      'lazy-motion:backward'
+  ';':      'core:confirm'
+  'ctrl-p': 'lazy-motion:set-history-prev'
+  'ctrl-n': 'lazy-motion:set-history-next'
+  'cmd-e':  'lazy-motion:set-cursor-word'

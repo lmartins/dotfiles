@@ -22,7 +22,7 @@
         'prefix': 'rbase'
         'body': '// TODO: Replicar no Base'
 
-'.source.twig':
+'.text.html.twig':
 
     'Var Dump':
         'prefix': 'dump'
@@ -32,11 +32,16 @@
         'prefix': '__'
         'body': "{{ __( $1, $2 ) }}$3"
 
+    'Do Action':
+        'prefix': 'do'
+        'body': "{% do action('$1') %}$2"
+
+
 '.source.scss':
 
     'Debug Border':
         'prefix': 'red'
-        'body': '@include border(red);'
+        'body': '@include border(${1:red});$2'
 
     'Absolute':
         'prefix': 'abs'
@@ -108,3 +113,32 @@
                 content: "";
             }
             """
+
+    'AM Block':
+        'prefix': 'am'
+        'body': """
+            [am-${1:block}]{
+                $2
+            }$3
+            """
+
+    'AM Block Child':
+        'prefix': 'amc'
+        'body': """
+            [am-${1:block}-${2:child}]{
+                $3
+            }$4
+            """
+
+    'AM Block Modifier':
+        'prefix': 'amm'
+        'body': """
+            [am-${1:block}~="${2:modifier}"]{
+                $3
+            }$4
+            """
+
+'.source.php':
+    'Dump':
+        'prefix': 'dump'
+        'body': 'var_dump( $1 );$2'

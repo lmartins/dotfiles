@@ -10,7 +10,6 @@
   core:
     disabledPackages: [
       "symbols-view"
-      "linter-jscs"
       "autocomplete"
       "autohide-tree-view"
       "powerline"
@@ -35,6 +34,10 @@
       "wrap-guide"
       "php-debug"
       "smalls"
+      "linter"
+      "quippet"
+      "atomatigit"
+      "imdone-atom"
     ]
     projectHome: "/Users/luismartins/Sites"
     ignoredNames: [
@@ -45,8 +48,8 @@
       "jspm_packages"
     ]
     themes: [
-      "one-dark-ui"
-      "br4ckets-light"
+      "atom-material-ui"
+      "atom-snappy"
     ]
   "exception-reporting":
     userId: "bfa3285b-6dd3-edc4-e06e-c4ad0e14bab4"
@@ -72,9 +75,8 @@
   "autocomplete-plus":
     confirmCompletion: "enter"
     strictMatching: true
-    minimumWordLength: 2
-    autoActivationDelay: 160
-    backspaceTriggersAutocomplete: true
+    minimumWordLength: 4
+    autoActivationDelay: 300
   "linter-jscs": {}
   "linter-jshint": {}
   "autohide-tree-view":
@@ -90,10 +92,15 @@
     fontFamily: "Fira Sans"
     customBackgroundColor: "false"
   "isotope-ui":
-    spaciousMode: true
     backgroundColor: "false"
-    fontWeight: "Regular"
     fontFamily: "Fira Sans"
+    customBackgroundColorPicker:
+      red: 65
+      green: 45
+      blue: 69
+      alpha: 1
+    spaciousMode: true
+    fontWeight: "Regular"
   "symbols-tree-view": {}
   "recent-files-fuzzy-finder": {}
   "atom-alignment": {}
@@ -105,6 +112,7 @@
       bookmarks: true
       codeglance: true
       "minimap-hide": true
+      selection: true
     absoluteMode: true
   "spell-check": {}
   goto:
@@ -112,17 +120,22 @@
   "takana-atom": {}
   toggle: {}
   "one-dark-ui": {}
-  pigments:
-    markerType: "dot"
+  pigments: {}
   "atom-material-ui":
     depth: true
     panelContrast: true
-    altCmdPalette: true
+    rippleAccentColor: true
+    showTabIcons: true
+    fontSize: "Big"
+    accentColor: "Blue"
   "file-icons":
     onChanges: true
   "minimap-codeglance":
-    numberOfLines: 14
+    numberOfLines: 20
     showGutter: false
+    showLineNumbers: false
   "lazy-motion":
     autoLand: true
     showHoverIndicator: true
+  "todo-show": {}
+  jumpy: {}
