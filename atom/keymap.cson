@@ -28,22 +28,34 @@
     'cmd-shift-w': 'pane:close-other-items'
     'shift-cmd-ctrl-W': 'window:close'
 
-'atom-text-editor':
-    'cmd-shift-space' : 'expand-selection:expand'
-
 'atom-workspace':
-    'ctrl-shift-g' : 'git-control:toggle'
     'ctrl-i' : 'cursor-history:next'
     'ctrl-o' : 'cursor-history:prev'
 
-'atom-text-editor.vim-mode.command-mode':
-    '-': 'toggle:there'
-    ']': 'cursor-history:next'
-    '[': 'cursor-history:prev'
+'atom-workspace:not([mini])':
+  'cmd-k x':         'paner:swap-item'
+  'cmd-k X':         'paner:send-item'
+  'cmd-alt-enter':       'paner:maximize'
+  'cmd-k cmd-up':    'paner:very-top'
+  'cmd-k cmd-down':  'paner:very-bottom'
+  'cmd-k cmd-left':  'paner:very-left'
+  'cmd-k cmd-right': 'paner:very-right'
+
+'atom-text-editor':
+    # expand region
+    'alt-space': 'expand-region:expand'
+    'alt-shift-space': 'expand-region:shrink'
+
+# VIM MODES
+'atom-text-editor.vim-mode:not(.insert-mode)':
     'space': 'editor:toggle-current-row-folding'
     'g f':      'open-this:here'
     'ctrl-w f': 'open-this:split-down'
     'ctrl-w F': 'open-this:split-right'
+
+'atom-text-editor.vim-mode.command-mode':
+    ']': 'cursor-history:next'
+    '[': 'cursor-history:prev'
     'ctrl-k'  : 'editor:move-line-up'
     'ctrl-j'  : 'editor:move-line-down'
     ', b': 'fuzzy-finder:toggle-buffer-finder'
@@ -58,6 +70,12 @@
     'cmd-H':     'paner:very-left'
     'cmd-L':     'paner:very-right'
 
+'atom-text-editor.vim-mode.command-mode,
+ atom-text-editor.vim-mode.normal-mode,
+ atom-text-editor.vim-mode.visual-mode':
+  's':           'lazy-motion:forward'
+  'ctrl-p':      'lazy-motion:forward-again'
+
 'atom-text-editor.vim-mode.visual-mode':
     'v'     : 'expand-region:expand'
     'V'     : 'expand-region:shrink'
@@ -65,29 +83,8 @@
     'ctrl-j': 'editor:move-line-down'
 
 
-'.platform-darwin .pane .editor:not(.mini)':
-    'cmd-/': 'editor:toggle-line-comments'
-
-'.platform-darwin':
-    'shift-cmd-R': 'atom-ctags:toggle-project-symbols'
-
-'.platform-darwin atom-text-editor:not([mini])':
-    'shift-cmd-R': 'unset!'
-
-'atom-text-editor:not([mini])':
-    'ctrl-shift-R': 'unset!'
-
-'.fuzzy-finder atom-text-editor[mini]':
-  'ctrl-v': 'pane:split-right'
-  'ctrl-s': 'pane:split-down'
-
-# Lazy Motion
-'atom-text-editor.vim-mode.command-mode, atom-text-editor.vim-mode.visual-mode':
-  's':           'lazy-motion:forward'
-  'ctrl-p':      'lazy-motion:forward-again'
-
+# LAZY MOTION
 'atom-text-editor.lazy-motion':
-  'ctrl-u': 'editor:delete-to-beginning-of-line'
   ']':      'lazy-motion:forward'
   '[':      'lazy-motion:backward'
   ';':      'core:confirm'

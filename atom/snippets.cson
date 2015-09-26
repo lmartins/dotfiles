@@ -30,7 +30,7 @@
 
     'Label':
         'prefix': '__'
-        'body': "{{ __( $1, $2 ) }}$3"
+        'body': "{{ __( '$1', '${2:wip}' ) }}$3"
 
     'Do Action':
         'prefix': 'do'

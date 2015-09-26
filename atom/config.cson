@@ -6,7 +6,7 @@
     fontSize: 12
     lineHeight: 2
     softWrap: true
-    fontFamily: "Fira Mono"
+    fontFamily: "Hack"
   core:
     disabledPackages: [
       "symbols-view"
@@ -26,18 +26,20 @@
       "language-ruby"
       "language-ruby-on-rails"
       "welcome"
-      "git-difftool"
       "layout-manager"
-      "takana-atom"
       "atom-ctags"
       "file-type-icons"
       "wrap-guide"
-      "php-debug"
       "smalls"
-      "linter"
-      "quippet"
       "atomatigit"
-      "imdone-atom"
+      "linter-jscs"
+      "linter-jshint"
+      "emmet-snippets-compatibility"
+      "emmet"
+      "pigments"
+      "debugger-lines"
+      "goto"
+      "jumpy"
     ]
     projectHome: "/Users/luismartins/Sites"
     ignoredNames: [
@@ -48,8 +50,8 @@
       "jspm_packages"
     ]
     themes: [
-      "atom-material-ui"
-      "atom-snappy"
+      "nucleus-dark-ui"
+      "atom-dark-fusion-syntax"
     ]
   "exception-reporting":
     userId: "bfa3285b-6dd3-edc4-e06e-c4ad0e14bab4"
@@ -76,7 +78,6 @@
     confirmCompletion: "enter"
     strictMatching: true
     minimumWordLength: 4
-    autoActivationDelay: 300
   "linter-jscs": {}
   "linter-jshint": {}
   "autohide-tree-view":
@@ -119,23 +120,38 @@
     moreIgnoredNames: "build, jspm_packages, node_modules, bower_components"
   "takana-atom": {}
   toggle: {}
-  "one-dark-ui": {}
-  pigments: {}
+  "one-dark-ui":
+    layoutMode: "Spacious"
+  pigments:
+    markerType: "dot"
   "atom-material-ui":
     depth: true
     panelContrast: true
     rippleAccentColor: true
-    showTabIcons: true
     fontSize: "Big"
-    accentColor: "Blue"
+    accentColor: "White"
   "file-icons":
     onChanges: true
   "minimap-codeglance":
     numberOfLines: 20
     showGutter: false
     showLineNumbers: false
+    decorations: false
   "lazy-motion":
     autoLand: true
     showHoverIndicator: true
-  "todo-show": {}
+  "todo-show":
+    ignoreThesePaths: [
+      "*/node_modules/"
+      "*/build/"
+      "*/jspm_packages/"
+      "*/lib/"
+    ]
   jumpy: {}
+  "markdown-preview":
+    breakOnSingleNewline: true
+  "advanced-open-file":
+    createFileInstantly: true
+  term3:
+    openPanesInSameSplit: true
+  "expand-region": {}
