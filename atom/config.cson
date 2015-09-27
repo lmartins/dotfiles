@@ -75,7 +75,6 @@
   "tree-view":
     hideIgnoredNames: true
   "autocomplete-plus":
-    confirmCompletion: "enter"
     strictMatching: true
     minimumWordLength: 4
   "linter-jscs": {}
