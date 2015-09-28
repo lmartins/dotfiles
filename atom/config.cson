@@ -154,3 +154,4 @@
   term3:
     openPanesInSameSplit: true
   "expand-region": {}
+  "php-debug": {}

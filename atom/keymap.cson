@@ -42,6 +42,7 @@
   'cmd-k cmd-right': 'paner:very-right'
 
 'atom-text-editor':
+    'alt-f12': 'php-debug:toggleDebugging'
     # expand region
     'alt-space': 'expand-region:expand'
     'alt-shift-space': 'expand-region:shrink'
