@@ -46,6 +46,9 @@
     # expand region
     'alt-space': 'expand-region:expand'
     'alt-shift-space': 'expand-region:shrink'
+    # inc
+    'ctrl-up': 'inc:inc'
+    'ctrl-down': 'inc:dec'
 
 # VIM MODES
 'atom-text-editor.vim-mode:not(.insert-mode)':
