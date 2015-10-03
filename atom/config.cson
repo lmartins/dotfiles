@@ -30,6 +30,8 @@
       "file-type-icons"
       "wrap-guide"
       "smalls"
+      "linter-jshint"
+      "symbols-tree-view"
     ]
     projectHome: "/Users/luismartins/Sites"
     ignoredNames: [

@@ -57,15 +57,13 @@
     'ctrl-w f': 'open-this:split-down'
     'ctrl-w F': 'open-this:split-right'
 
-'atom-text-editor.vim-mode.command-mode':
+'atom-text-editor.vim-mode.normal-mode':
     ']': 'cursor-history:next'
     '[': 'cursor-history:prev'
     'ctrl-k'  : 'editor:move-line-up'
     'ctrl-j'  : 'editor:move-line-down'
     ', b': 'fuzzy-finder:toggle-buffer-finder'
     ', f': 'fuzzy-finder:toggle-file-finder'
-    'ctrl-i' : 'cursor-history:next'
-    'ctrl-o' : 'cursor-history:prev'
     'cmd-x':     'paner:swap-item'
     'cmd-X':     'paner:send-item'
     'cmd-enter': 'paner:maximize'
@@ -73,6 +71,7 @@
     'cmd-J':     'paner:very-bottom'
     'cmd-H':     'paner:very-left'
     'cmd-L':     'paner:very-right'
+
 
 'atom-text-editor.vim-mode.command-mode,
  atom-text-editor.vim-mode.normal-mode,
