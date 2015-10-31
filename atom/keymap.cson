@@ -50,6 +50,10 @@
     'ctrl-up': 'inc:inc'
     'ctrl-down': 'inc:dec'
 
+    # fast-duplicate
+    'ctrl-alt-down': 'fast-duplicate:duplicate-down'
+    'ctrl-alt-up': 'fast-duplicate:duplicate-up'
+
 # VIM MODES
 'atom-text-editor.vim-mode:not(.insert-mode)':
     'space': 'editor:toggle-current-row-folding'
