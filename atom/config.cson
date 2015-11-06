@@ -3,10 +3,10 @@
     invisibles: {}
     scrollPastEnd: true
     tabLength: 4
-    fontSize: 12
     lineHeight: 2
     softWrap: true
     fontFamily: "Hack"
+    fontSize: 12
   core:
     disabledPackages: [
       "symbols-view"
@@ -32,6 +32,7 @@
       "smalls"
       "linter-jshint"
       "symbols-tree-view"
+      "linter-eslint"
     ]
     projectHome: "/Users/luismartins/Sites"
     ignoredNames: [
@@ -147,3 +148,6 @@
     openPanesInSameSplit: true
   "expand-region": {}
   "php-debug": {}
+  "linter-php": {}
+  "linter-eslint":
+    useGlobalEslint: true
