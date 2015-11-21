@@ -98,3 +98,6 @@
   'ctrl-p': 'lazy-motion:set-history-prev'
   'ctrl-n': 'lazy-motion:set-history-next'
   'cmd-e':  'lazy-motion:set-cursor-word'
+
+'.platform-darwin':
+  'ctrl-shift-cmd-H': 'git-plus:menu'

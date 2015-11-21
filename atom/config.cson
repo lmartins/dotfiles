@@ -33,6 +33,7 @@
       "linter-jshint"
       "symbols-tree-view"
       "linter-eslint"
+      "imdone-atom"
     ]
     projectHome: "/Users/luismartins/Sites"
     ignoredNames: [
@@ -107,6 +108,7 @@
       "minimap-hide": true
       selection: true
     absoluteMode: true
+    scrollAnimation: true
   "spell-check": {}
   goto:
     moreIgnoredNames: "build, jspm_packages, node_modules, bower_components"
@@ -151,3 +153,5 @@
   "linter-php": {}
   "linter-eslint":
     useGlobalEslint: true
+  "git-plus": {}
+  "imdone-atom": {}
