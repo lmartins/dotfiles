@@ -31,7 +31,6 @@
       "smalls"
       "linter-jshint"
       "symbols-tree-view"
-      "linter-eslint"
       "imdone-atom"
     ]
     projectHome: "/Users/luismartins/Sites"
