@@ -9,7 +9,6 @@
     fontSize: 12
   core:
     disabledPackages: [
-      "symbols-view"
       "autocomplete"
       "autohide-tree-view"
       "powerline"
