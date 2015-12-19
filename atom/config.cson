@@ -2,14 +2,14 @@
   editor:
     invisibles: {}
     scrollPastEnd: true
-    tabLength: 4
     lineHeight: 2
     softWrap: true
     fontFamily: "Hack"
     fontSize: 12
+    tabType: "soft"
+    tabLength: 4
   core:
     disabledPackages: [
-      "symbols-view"
       "autocomplete"
       "autohide-tree-view"
       "powerline"
@@ -30,10 +30,8 @@
       "file-type-icons"
       "wrap-guide"
       "smalls"
-      "linter-jshint"
-      "symbols-tree-view"
-      "linter-eslint"
-      "imdone-atom"
+      "git-plus"
+      "bottom-dock"
     ]
     projectHome: "/Users/luismartins/Sites"
     ignoredNames: [
@@ -45,7 +43,10 @@
     ]
     themes: [
       "nucleus-dark-ui"
-      "atom-dark-fusion-syntax"
+      "atom-material-syntax"
+    ]
+    packagesWithKeymapsDisabled: [
+      "emmet"
     ]
   "exception-reporting":
     userId: "bfa3285b-6dd3-edc4-e06e-c4ad0e14bab4"
@@ -84,7 +85,7 @@
   "isotope-light-ui":
     fontWeight: "Regular"
     fontFamily: "Fira Sans"
-    customBackgroundColor: "false"
+    customBackgroundColor: false
   "isotope-ui":
     backgroundColor: "false"
     fontFamily: "Fira Sans"
@@ -107,6 +108,7 @@
       codeglance: true
       "minimap-hide": true
       selection: true
+      cursorline: true
     absoluteMode: true
     scrollAnimation: true
   "spell-check": {}
@@ -118,6 +120,7 @@
     layoutMode: "Spacious"
   pigments:
     markerType: "dot"
+    extendAutocompleteToVariables: true
   "atom-material-ui":
     depth: true
     panelContrast: true
@@ -155,3 +158,6 @@
     useGlobalEslint: true
   "git-plus": {}
   "imdone-atom": {}
+  "nav-panel": {}
+  calc:
+    evaluateAllOnEmptySelection: false

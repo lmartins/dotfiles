@@ -60,6 +60,8 @@ alias gfp="git flow feature publish"
 alias ghs="git flow hotfix start"
 alias ghf="git flow hotfix finish"
 
+alias ddp="gulp deploy"
+
 alias tower="gittower ."
 
 alias log="git log --all --pretty=format:'%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"

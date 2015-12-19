@@ -84,7 +84,7 @@
     'MQ: Desktop':
         'prefix': 'mqd'
         'body': """
-            @include desktop{
+            @include desktop {
                 $1
             }$2
             """
@@ -92,7 +92,7 @@
     'MQ: Tablet':
         'prefix': 'mqt'
         'body': """
-            @include tablet{
+            @include tablet {
                 $1
             }$2
             """
@@ -100,7 +100,7 @@
     'MQ: Until':
         'prefix': 'mqud'
         'body': """
-            @include mq($until: $1){
+            @include mq($until: $1) {
                 $2
             }$3
             """
