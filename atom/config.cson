@@ -32,6 +32,9 @@
       "smalls"
       "git-plus"
       "bottom-dock"
+      "linter-jshint"
+      "symbols-tree-view"
+      "imdone-atom"
     ]
     projectHome: "/Users/luismartins/Sites"
     ignoredNames: [
