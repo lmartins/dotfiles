@@ -7,11 +7,24 @@
   "atom-ctags":
     cmdArgs: "--exclude=node_modules --exclude=components --exclude=bower_components --exclude=jspm_packages"
   "atom-material-ui":
-    accentColor: "White"
+    colors:
+      abaseColor:
+        red: 95
+        green: 120
+        blue: 202
+        alpha: 1
+      predefinedColor: "Indigo"
     depth: true
     fontSize: "Big"
+    fonts: {}
     panelContrast: true
-    rippleAccentColor: true
+    tabs:
+      tintedTabBar: true
+    treeView:
+      blendTabs: true
+      compactList: true
+    ui:
+      panelShadows: true
   "atom-terminal-panel": {}
   "autocomplete-plus":
     minimumWordLength: 4
@@ -49,20 +62,22 @@
       "symbols-tree-view"
       "imdone-atom"
       "pigments"
+      "vim-mode"
+      "vim-surround"
+      "linter-php"
+      "livestyle-atom"
+      "terminal-panel"
     ]
     ignoredNames: [
       ".DS_Store"
       "bower_components"
       "node_modules"
-      "build"
       "jspm_packages"
-    ]
-    packagesWithKeymapsDisabled: [
-      "emmet"
+      "build"
     ]
     projectHome: "/Users/luismartins/Sites"
     themes: [
-      "nucleus-dark-ui"
+      "atom-material-ui"
       "anodyne-dark-syntax"
     ]
   editor:
@@ -123,10 +138,14 @@
     absoluteMode: true
     plugins:
       bookmarks: true
+      bookmarksDecorationsZIndex: 0
       codeglance: true
+      codeglanceDecorationsZIndex: 0
       cursorline: true
+      cursorlineDecorationsZIndex: 0
       "minimap-hide": true
       selection: true
+      selectionDecorationsZIndex: 0
     scrollAnimation: true
   "minimap-codeglance":
     decorations: false
@@ -136,7 +155,14 @@
   "nav-panel": {}
   "one-dark-ui":
     layoutMode: "Spacious"
-  "php-debug": {}
+  "php-debug":
+    PhpException:
+      Deprecated: false
+      Notice: false
+      StrictStandards: false
+      Warning: false
+      Xdebug: false
+  "php-integrator-base": {}
   pigments:
     extendAutocompleteToVariables: true
     markerType: "dot"
@@ -156,11 +182,12 @@
       "*/build/"
       "*/jspm_packages/"
       "*/lib/"
+      "*/libs/"
+      "libs/"
     ]
   toggle: {}
   "tree-view":
     hideIgnoredNames: true
-    hideVcsIgnoredFiles: true
   "vim-mode":
     useClipboardAsDefaultRegister: true
   "vim-surround": {}
